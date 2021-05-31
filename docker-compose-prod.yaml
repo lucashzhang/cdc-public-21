@@ -1,0 +1,20 @@
+version: '3'
+services:
+  strapi:
+    image: strapi/strapi
+    volumes:
+      - ./strapi-backend:/srv/app
+    ports:
+      - '1337:1337'
+    environment: 
+      - NODE_ENV=production
+  react-app:
+    build:
+      context: ./cdc-frontend-app
+      dockerfile: Dockerfile.prod
+    ports:
+      - '8080:80'
+    # environment: 
+    #   - REACT_APP_NAME=cdc-frontend
+    # env_file: 
+    #   - ./.env
