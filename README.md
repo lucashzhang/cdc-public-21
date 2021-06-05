@@ -9,7 +9,8 @@ It includes the source code for the ReactJS frontend site as well as the Strapi 
 **ReactJS**: ReactJS is a very popular framework developed by Facebook for recreating web applications. 
 
 Additionally, the JavaScript libraries that I used are:
-- TBD
+- Framer/Motion: Useful and performative JavaScript Animation Library
+- Node-sass: For styling, I personally dislike using CSS frameworks, but I still appreciate things that make CSS easier
 
 **Strapi**: Strapi is NodeJS content management system. We are using it so that all directors can update site content with the minimum computer science knowledge. That way changes and new configurations can be made to the site as quickly as possible.
 
