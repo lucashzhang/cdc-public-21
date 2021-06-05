@@ -13,7 +13,7 @@ services:
       context: ./cdc-frontend-app
       dockerfile: Dockerfile.prod
     ports:
-      - '8080:80'
+      - '3000:80'
     # environment: 
     #   - REACT_APP_NAME=cdc-frontend
     # env_file: 
