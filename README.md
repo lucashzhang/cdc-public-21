@@ -15,7 +15,7 @@ Additionally, the JavaScript libraries that I used are:
 **Strapi**: Strapi is NodeJS content management system. We are using it so that all directors can update site content with the minimum computer science knowledge. That way changes and new configurations can be made to the site as quickly as possible.
 
 ## Setting up a Development Environment
-Go to the top most directory of the project (the one where the docker-compose.yaml file resides) and run the following command:
+Go to the top most directory of the project (the one where the docker-compose.yml file resides) and run the following command:
 ```
 docker compose up -d
 ```
@@ -25,7 +25,7 @@ docker compose up -d --build
 ```
 
 ## Building the Production Environment
-Go to the top most directory of the project (the one where the docker-compose.yaml file resides) and run the following command:
+Go to the top most directory of the project (the one where the docker-compose.yml file resides) and run the following command:
 ```
-docker compose -f docker-compose-prod.yaml up -d --build
+docker compose -f docker-compose-prod.yml up -d --build
 ```
