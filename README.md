@@ -7,7 +7,7 @@ It includes the source code for the ReactJS frontend site as well as the Strapi 
 **Docker**: This app was built using Docker Containers. So, this is the only real requirement for the app. Docker needs to already be installed on the computer to keep setup to a minimum.
 
 Docker Images used:
-- [strapi/strapi](hhttps://hub.docker.com/r/strapi/strapi): this image automatically sets up the backend strapi server in a docker container
+- [strapi/strapi](https://hub.docker.com/r/strapi/strapi): this image automatically sets up the backend strapi server in a docker container
 - [node](https://hub.docker.com/_/node): this image is used in development to handle the react app as well as to create the production build through npm run build
 - [nginx](https://hub.docker.com/_/nginx): this image is used to host the ReactJS application in production mode
 - [jwilder/nginx-proxy](https://hub.docker.com/r/jwilder/nginx-proxy): this image is used to setup the reverse proxy to deal with serving the backend and frontend together safely
