@@ -20,4 +20,4 @@ services:
       dockerfile: Dockerfile.prod
     environment: 
       - VIRTUAL_HOST=cdcunc.com
-      # - VIRUTAL_HOST=localhost
+      # - VIRTUAL_HOST=localhost
