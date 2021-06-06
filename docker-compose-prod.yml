@@ -1,20 +1,23 @@
 version: '3'
 services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
   strapi:
     image: strapi/strapi
     volumes:
       - ./strapi-backend:/srv/app
-    ports:
-      - '1337:1337'
     environment: 
       - NODE_ENV=production
+      - VIRTUAL_HOST=api.cdcunc.com
   react-app:
     build:
       context: ./cdc-frontend-app
       dockerfile: Dockerfile.prod
-    ports:
-      - '3000:80'
-    # environment: 
-    #   - REACT_APP_NAME=cdc-frontend
-    # env_file: 
-    #   - ./.env
+    environment: 
+      - VIRTUAL_HOST=cdcunc.com
+      # - VIRUTAL_HOST=localhost
