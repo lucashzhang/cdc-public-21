@@ -14,7 +14,7 @@ Docker Images used:
 
 [**ReactJS**](https://reactjs.org/): ReactJS is a very popular framework developed by Facebook for recreating web applications. 
 
-Additionally, the JavaScript libraries that I used are:
+Additional JavaScript libraries used:
 - [Framer/Motion](https://www.framer.com/motion/): Useful and performative JavaScript Animation Library
 - [Node-sass](https://sass-lang.com/): For styling, I personally dislike using CSS frameworks, but I still appreciate things that make CSS easier
 
