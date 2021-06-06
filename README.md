@@ -16,7 +16,7 @@ Docker Images used:
 
 Additional JavaScript libraries used:
 - [Framer/Motion](https://www.framer.com/motion/): Useful and performative JavaScript Animation Library
-- [Node-sass](https://sass-lang.com/): For styling, I personally dislike using CSS frameworks, but I still appreciate things that make CSS easier
+- [Node-sass](https://sass-lang.com/): For easier styling. I personally dislike using CSS frameworks, but I still appreciate things that make CSS easier
 
 [**Strapi**](https://strapi.io/): Strapi is NodeJS content management system. We are using it so that all directors can update site content with the minimum computer science knowledge. That way changes and new configurations can be made to the site as quickly as possible.
 
@@ -29,7 +29,7 @@ To rebuild any images run:
 ```
 docker compose up -d --build
 ```
-To shut it down run:
+To shut it all down run:
 ```
 docker compose down
 ```
@@ -39,7 +39,7 @@ Go to the top most directory of the project (the one where the docker-compose.ym
 ```
 docker compose -f docker-compose-prod.yml up -d --build
 ```
-To shut it down run:
+To shut it all down run:
 ```
 docker compose -f docker-compose-prod.yml down
 ```
