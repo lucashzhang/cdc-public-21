@@ -7,6 +7,18 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+  #     - ./nginx-production/certs:/etc/nginx/certs
+  #     - ./nginx-production/vhost:/etc/nginx/vhost.d
+  #     - ./nginx-production/html:/usr/share/nginx/html
+  # letsencrypt-helper:
+  #   image: nginxproxy/acme-companion
+  #   volumes_from: 
+  #     - nginx-proxy
+  #   volumes: 
+  #     - /var/run/docker.sock:/var/run/docker.sock:ro
+  #     - ./nginx-production/acme:/etc/acme.sh
+  #   environment: 
+  #     - DEFAULT_EMAIL=temp@temp.temp
   strapi:
     image: strapi/strapi
     volumes:
