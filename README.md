@@ -4,7 +4,7 @@ This is the repository for the 2021 Carolina Data Challenge public site.
 It includes the source code for the ReactJS frontend site as well as the Strapi backend content management system.
 
 ## Software Requirements & Tech Stack
-[**Docker**](https://www.docker.com/): This app was built using Docker Containers. So, this is the only real requirement for the app. **Docker needs to already be installed on the computer to keep setup to a minimum**.
+[**Docker**](https://www.docker.com/): This app was built using Docker Containers. So, this is the only real requirement for the app. **Docker needs to already be installed on the computer for this to work**.
 
 Docker Images used:
 - [strapi/strapi](https://hub.docker.com/r/strapi/strapi): this image automatically sets up the backend strapi server in a docker container
