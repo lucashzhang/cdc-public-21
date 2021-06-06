@@ -26,10 +26,14 @@ services:
     environment: 
       - NODE_ENV=production
       - VIRTUAL_HOST=api.cdcunc.com
+      # - LETSENCRYPT_HOST=api.cdcunc.com
+      # - LETSENCRYPT_EMAIL=temp@temp.temp
   react-app:
     build:
       context: ./cdc-frontend-app
       dockerfile: Dockerfile.prod
     environment: 
       - VIRTUAL_HOST=cdcunc.com
+      # - LETSENCRYPT_HOST=cdcunc.com
+      # - LETSENCRYPT_EMAIL=temp@temp.temp
       # - VIRTUAL_HOST=localhost
