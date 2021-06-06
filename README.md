@@ -11,7 +11,6 @@ Docker Images used:
 - [node](https://hub.docker.com/_/node): this image is used in development to handle the react app as well as to create the production build through npm run build
 - [nginx](https://hub.docker.com/_/nginx): this image is used to host the ReactJS application in production mode
 - [jwilder/nginx-proxy](https://hub.docker.com/r/jwilder/nginx-proxy): this image is used to setup the reverse proxy to deal with serving the backend and frontend together safely
-- [nginxproxy/acme-companion](https://hub.docker.com/r/nginxproxy/acme-companion): this image is to help with the SSL certificates needed for https. I'm actually thinking this one might be unnecessary and will deal with the certs and keys manually myself
 
 [**ReactJS**](https://reactjs.org/): ReactJS is a very popular framework developed by Facebook for recreating web applications. 
 
