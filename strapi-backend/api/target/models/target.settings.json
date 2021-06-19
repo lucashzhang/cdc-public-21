@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "targets",
+  "info": {
+    "name": "Target",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Sections": {
+      "type": "dynamiczone",
+      "components": [
+        "section.description",
+        "section.schedules",
+        "section.tracks"
+      ]
+    },
+    "URL": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}

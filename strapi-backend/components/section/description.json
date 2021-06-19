@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_section_descriptions",
+  "info": {
+    "name": "Description",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}

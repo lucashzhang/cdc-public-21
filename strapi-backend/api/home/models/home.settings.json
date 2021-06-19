@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "name": "Home",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.description"
+    },
+    "Schedules": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.schedules"
+    },
+    "FAQ": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.faq"
+    }
+  }
+}

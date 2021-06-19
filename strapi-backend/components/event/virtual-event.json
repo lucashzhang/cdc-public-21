@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_event_virtual_events",
+  "info": {
+    "name": "Virtual Event",
+    "icon": "calendar-week",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Start": {
+      "type": "time"
+    },
+    "End": {
+      "type": "time"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

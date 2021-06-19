@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_section_faqs",
+  "info": {
+    "name": "FAQ",
+    "icon": "info-circle"
+  },
+  "options": {},
+  "attributes": {
+    "faqs": {
+      "collection": "faq"
+    }
+  }
+}
