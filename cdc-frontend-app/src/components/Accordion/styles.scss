@@ -1,0 +1,22 @@
+@import "../../utilities/theme";
+@use "sass:map";
+
+.Accordion {
+  width: 500px;
+  padding: 1rem;
+
+  button {
+    padding: 1rem;
+    border-radius: 4px;
+  }
+
+  section {
+    overflow-y: hidden;
+    background-color: map-get($map: $theme-colors, $key: "backgroundLight");
+    border-radius: 4px;
+  }
+
+  .Accordion-body {
+    padding: 1rem;
+  }
+}

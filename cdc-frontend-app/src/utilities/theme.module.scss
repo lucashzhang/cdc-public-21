@@ -1,0 +1,7 @@
+@import "./theme";
+
+:export {
+  @each $key, $value in $theme-colors {
+    #{unquote($key)}: $value;
+  }
+}

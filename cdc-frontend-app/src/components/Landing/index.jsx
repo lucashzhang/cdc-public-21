@@ -1,16 +1,16 @@
-import logo from './logo.svg';
-import './App.scss';
+import logo from '../../assets/logo.svg';
+import './styles.scss';
 
-function App() {
+function Landing() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="Landing">
+      <header className="Landing-header">
+        <img src={logo} className="Landing-logo" alt="logo" />
         <p>
           Hello, Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          className="Landing-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default Landing;

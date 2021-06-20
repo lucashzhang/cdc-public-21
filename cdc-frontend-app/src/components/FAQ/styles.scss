@@ -1,0 +1,12 @@
+@import "../../utilities/theme";
+@use "sass:map";
+
+.FAQ {
+  height: 100vh;
+
+  .question-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
