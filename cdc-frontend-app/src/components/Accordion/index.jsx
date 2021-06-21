@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactMarkdown from 'react-markdown';
 import { motion, AnimatePresence } from "framer-motion";
-import theme from '../../utilities/theme.module.scss';
+import theme from "../../utilities/theme.module.scss";
 import "./styles.scss";
 
 const contentVariants = {
@@ -8,19 +9,23 @@ const contentVariants = {
   collapsed: { opacity: 0, height: 0 },
 };
 
-function Accordion({ id, open, setOpen, header, body }) {
+function Accordion({ id, header, body }) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="Accordion">
       <motion.button
         initial={false}
-        animate={{ backgroundColor: open ? theme.primary : theme.backgroundLight }}
-        onClick={() => setOpen(open ? undefined : id)}
+        animate={{
+          backgroundColor: isOpen ? theme.primary : theme.backgroundLight,
+          color: isOpen ? theme.background : theme.textPrimary,
+        }}
+        onClick={() => setIsOpen(!isOpen)}
         className="Accordion-header"
       >
-        {header}      
+        {header}
       </motion.button>
       <AnimatePresence>
-        {open && (
+        {isOpen && (
           <motion.section
             key={`Accordion-content-${id}`}
             variants={contentVariants}
@@ -34,7 +39,7 @@ function Accordion({ id, open, setOpen, header, body }) {
               transition={{ duration: 0.4 }}
               className="Accordion-body"
             >
-              {body}
+              {body && <ReactMarkdown>{body}</ReactMarkdown>}
             </motion.div>
           </motion.section>
         )}

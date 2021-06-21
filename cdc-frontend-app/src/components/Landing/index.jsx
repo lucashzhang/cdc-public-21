@@ -1,7 +1,9 @@
+import React from 'react';
 import logo from '../../assets/logo.svg';
 import './styles.scss';
 
 function Landing() {
+
   return (
     <div className="Landing">
       <header className="Landing-header">
