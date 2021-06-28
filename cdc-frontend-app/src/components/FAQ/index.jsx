@@ -8,7 +8,7 @@ function FAQ({ contents }) {
       <header>
         <h1>FAQ</h1>
       </header>
-      <div className="question-container">
+      <div className="row">
         {contents['faqs'].map((qa) => (
           <Accordion
             id={qa.Question}

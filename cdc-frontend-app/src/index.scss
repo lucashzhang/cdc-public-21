@@ -35,3 +35,16 @@ button, input[type="submit"], input[type="reset"] {
 	outline: inherit;
   width: 100%;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.dropshadow {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}

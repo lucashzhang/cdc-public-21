@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Landing from "../Landing";
-import FAQ from "../FAQ";
+import Landing from "../../components/Landing";
+import About from "../../components/About";
+import FAQ from "../../components/FAQ";
 import "./styles.scss";
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
   return (
     <div className="App">
       <Landing />
-      <FAQ contents={pageContent['FAQ']} />
+      <About content={pageContent["Description"]} />
+      <FAQ contents={pageContent["FAQ"]} />
       <Landing />
     </div>
   );

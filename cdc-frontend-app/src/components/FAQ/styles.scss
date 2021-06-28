@@ -2,10 +2,8 @@
 @use "sass:map";
 
 .FAQ {
-  height: 100vh;
 
-  .question-container {
-    display: flex;
+  .row {
     flex-wrap: wrap;
     justify-content: center;
   }
