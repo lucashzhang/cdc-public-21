@@ -1,25 +1,33 @@
-.About {
+@import "../../utilities/theme";
+@use "sass:map";
 
+.About {
+  height: 700px;
+  
   .row {
     perspective: 1800px;
+    height: 100%;
+    align-items: center;
   }
 
   .about-text {
     width: 100%;
-    max-width: 900px;
+    max-width: 700px;
   }
 
   .about-video-container {
+    position: relative;
     margin-left: auto;
     width: 100%;
-    max-width: 500px;
-    max-height: 281.25px;
-    margin-right: 2rem;
-    transform: rotateY(-15deg) rotateX(10deg);
-  }
-
-  .about-video {
-    width: 100%;
     height: 100%;
+    max-width: 1000px;
+    margin-right: 2rem;
+    transform: rotateY(-24deg) rotateX(16deg);
+
+    .about-video {
+      width: 640px;
+      height: 360px;
+      background: map-get($map: $theme-colors, $key: "backgroundLight")
+    }
   }
 }

@@ -26,7 +26,6 @@ function App() {
       <Landing />
       <About content={pageContent["Description"]} />
       <FAQ contents={pageContent["FAQ"]} />
-      <Landing />
     </div>
   );
 }
