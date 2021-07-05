@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../assets/logo.svg';
 import './styles.scss';
 
-function Landing() {
+function Hero() {
 
   return (
     <div className="Landing">
@@ -24,4 +24,4 @@ function Landing() {
   );
 }
 
-export default Landing;
+export default Hero;

@@ -1,36 +1,21 @@
-import React, { useEffect, useState } from "react";
-import Landing from "../../components/Landing";
-import About from "../../components/About";
-import FAQ from "../../components/FAQ";
+import React from "react";
+import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
+import Landing from "../Landing";
+import Target from '../Target';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles.scss";
 
 function App() {
-  const [pageContent, setPageContent] = useState({});
-
-  useEffect(() => {
-    const controller = new AbortController();
-    const signal = controller.signal;
-
-    fetch("http://localhost:1337/home", { signal }).then(async (data) => {
-      const contents = await data.json();
-      setPageContent(contents);
-    });
-
-    return () => {
-      controller.abort();
-    };
-  }, []);
-
   return (
-    <>
-      <Landing />
-      <div className="app-content">
-        <About content={pageContent["Description"]} />
-        <FAQ contents={pageContent["FAQ"]} />
-      </div>
+    <Router>
+      <Hero />
+      <Switch>
+        <Route exact path="/t/:targetId" component={Target} />
+        <Route path="/" component={Landing} />
+      </Switch>
       <Footer />
-    </>
+    </Router>
   );
 }
 

@@ -5,7 +5,7 @@ function Footer() {
 
   return (
     <div className="Footer">
-      Copyright © 2020 <a href="https://carolinadata.unc.edu/" target="_blank">Carolina Analytics and Data Science</a>. All Rights Reserved
+      Copyright © 2020 <a href="https://carolinadata.unc.edu/" target="_blank" rel="noreferrer">Carolina Analytics and Data Science</a>. All Rights Reserved
     </div>
   );
 }

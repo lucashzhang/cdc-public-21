@@ -2,10 +2,9 @@ import React from "react";
 import Accordion from "../Accordion";
 import "./styles.scss";
 
-function FAQ({ contents }) {
-  console.log(contents)
+function Schedule({ contents }) {
   return contents ? (
-    <div className="FAQ">
+    <div className="Schedule">
       <header>
         <h1>FAQ</h1>
       </header>
@@ -23,4 +22,4 @@ function FAQ({ contents }) {
   ) : null;
 }
 
-export default FAQ;
+export default Schedule;

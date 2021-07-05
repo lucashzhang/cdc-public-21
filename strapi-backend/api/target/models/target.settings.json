@@ -17,10 +17,11 @@
       "components": [
         "section.description",
         "section.schedules",
-        "section.tracks"
+        "section.tracks",
+        "section.faq"
       ]
     },
-    "URL": {
+    "UID": {
       "type": "uid",
       "required": true
     }

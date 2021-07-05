@@ -3,16 +3,28 @@
 
 .About {
   height: 700px;
-  
+
+  @media only screen and (max-width: 992px) {
+    height: auto;
+  }
+
   .row {
     perspective: 1800px;
     height: 100%;
     align-items: center;
+
+    @media only screen and (max-width: 992px) {
+      perspective: none;
+      flex-direction: column;
+    }
   }
 
   .about-text {
     width: 100%;
-    max-width: 700px;
+
+    @media only screen and (max-width: 992px) {
+      max-width: 100%;
+    }
   }
 
   .about-video-container {
@@ -22,12 +34,26 @@
     height: 100%;
     max-width: 1000px;
     margin-right: 2rem;
+    margin-left: 2rem;
     transform: rotateY(-24deg) rotateX(16deg);
 
     .about-video {
       width: 640px;
       height: 360px;
-      background: map-get($map: $theme-colors, $key: "backgroundLight")
+      background: map-get($map: $theme-colors, $key: "backgroundLight");
+    }
+
+    @media only screen and (max-width: 992px) {
+      transform: rotateY(0deg) rotateX(0deg);
+      margin-right: 1rem;
+      margin-left: 1rem;
+      width: calc(100vw);
+      height: calc(calc(100vw) / 16 * 9);
+
+      .about-video {
+        width: calc(80vw);
+        height: calc(calc(80vw) / 16 * 9);
+      }
     }
   }
 }
