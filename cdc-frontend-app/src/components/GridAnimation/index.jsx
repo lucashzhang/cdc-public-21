@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./styles.scss";
-import { propTypes } from "react-markdown";
 
 const drawVariants = {
   hidden: {
@@ -23,14 +22,14 @@ const drawVariants = {
 
 const childVariants = {
   hidden: {
-    // opacity: 0,
+    opacity: 0,
     scale: 0,
     transition: {
       duration: 2,
     },
   },
   visible: {
-    // opacity: 1,
+    opacity: 1,
     scale: 1,
     transition: {
       duration: 2,
@@ -42,7 +41,7 @@ function GridAnimation({ children }) {
   const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0.5,
-    // triggerOnce: true,
+    triggerOnce: true,
   });
 
   return (

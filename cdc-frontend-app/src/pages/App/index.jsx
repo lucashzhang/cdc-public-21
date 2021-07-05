@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Landing from "../../components/Landing";
 import About from "../../components/About";
 import FAQ from "../../components/FAQ";
+import Footer from "../../components/Footer";
 import "./styles.scss";
 
 function App() {
@@ -22,11 +23,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <>
       <Landing />
-      <About content={pageContent["Description"]} />
-      <FAQ contents={pageContent["FAQ"]} />
-    </div>
+      <div className="app-content">
+        <About content={pageContent["Description"]} />
+        <FAQ contents={pageContent["FAQ"]} />
+      </div>
+      <Footer />
+    </>
   );
 }
 
