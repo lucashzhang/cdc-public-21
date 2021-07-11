@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Hero />
       <Switch>
-        <Route exact path="/t/:targetId" component={Target} />
+        <Route path="/t/:targetId" component={Target} />
         <Route path="/" component={Landing} />
       </Switch>
       <Footer />

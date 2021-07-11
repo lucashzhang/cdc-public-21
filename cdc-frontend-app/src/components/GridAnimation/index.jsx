@@ -22,14 +22,12 @@ const drawVariants = {
 
 const childVariants = {
   hidden: {
-    opacity: 0,
     scale: 0,
     transition: {
       duration: 2,
     },
   },
   visible: {
-    opacity: 1,
     scale: 1,
     transition: {
       duration: 2,

@@ -9,7 +9,7 @@ function Landing() {
     const controller = new AbortController();
     const signal = controller.signal;
 
-    fetch("http://localhost:1337/home", { signal }).then(async (data) => {
+    fetch(`http://${process.env.NODE_ENV === 'development' ? "localhost:1337" : "api.cdcunc.com"}/home`, { signal }).then(async (data) => {
       const contents = await data.json();
       setPageContent(contents);
     });

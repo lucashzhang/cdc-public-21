@@ -12,7 +12,7 @@ function Target() {
     const controller = new AbortController();
     const signal = controller.signal;
 
-    fetch(`http://localhost:1337/targets?UID=${targetId}`, { signal }).then(
+    fetch(`http://${process.env.NODE_ENV === 'development' ? "localhost:1337" : "api.cdcunc.com"}/targets?UID=${targetId}`, { signal }).then(
       async (data) => {
         const contents = await data.json();
         if (contents.length === 0) history.push("/");
