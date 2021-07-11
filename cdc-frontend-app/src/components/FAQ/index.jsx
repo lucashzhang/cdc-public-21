@@ -3,7 +3,6 @@ import Accordion from "../Accordion";
 import "./styles.scss";
 
 function FAQ({ contents }) {
-  console.log(contents)
   return contents ? (
     <div className="FAQ">
       <header>

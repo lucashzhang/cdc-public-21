@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { handleAPIURL } from "../../utilities/util";
 import { useParams, useHistory } from "react-router";
 import About from "../../components/About";
 import FAQ from "../../components/FAQ";
@@ -12,7 +13,7 @@ function Target() {
     const controller = new AbortController();
     const signal = controller.signal;
 
-    fetch(`http://${process.env.NODE_ENV === 'development' ? "localhost:1337" : "api.cdcunc.com"}/targets?UID=${targetId}`, { signal }).then(
+    fetch(`${handleAPIURL()}/targets?UID=${targetId}`, { signal }).then(
       async (data) => {
         const contents = await data.json();
         if (contents.length === 0) history.push("/");

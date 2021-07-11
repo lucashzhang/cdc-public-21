@@ -1,0 +1,11 @@
+@import "../../utilities/theme";
+@use "sass:map";
+
+.Directors {
+  .directorCard {
+    background-color: map-get($map: $theme-colors, $key: 'backgroundLight');
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+}
