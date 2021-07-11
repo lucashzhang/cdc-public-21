@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_section_directors",
+  "info": {
+    "name": "Directors",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "directors": {
+      "collection": "directors"
+    }
+  }
+}

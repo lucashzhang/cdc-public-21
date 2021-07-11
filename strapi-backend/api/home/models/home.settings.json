@@ -26,6 +26,11 @@
       "type": "component",
       "repeatable": false,
       "component": "section.faq"
+    },
+    "Directors": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.directors"
     }
   }
 }
