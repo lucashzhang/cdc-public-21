@@ -16,8 +16,8 @@ function Accordion({ id, header, body }) {
       <motion.button
         initial={false}
         animate={{
-          backgroundColor: isOpen ? theme.primary : theme.backgroundLight,
-          color: isOpen ? theme.background : theme.textPrimary,
+          backgroundColor: isOpen ? theme.secondary : theme.accent1,
+          color: isOpen ? theme.primary : theme.text,
         }}
         onClick={() => setIsOpen(!isOpen)}
         className="Accordion-header"

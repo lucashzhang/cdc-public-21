@@ -1,11 +1,13 @@
-import React from 'react';
-import './styles.scss';
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import "./styles.scss";
 
 function Footer() {
-
   return (
     <div className="Footer">
-      Copyright © 2020 <a href="https://carolinadata.unc.edu/" target="_blank" rel="noreferrer">Carolina Analytics and Data Science</a>. All Rights Reserved
+      <ReactMarkdown>
+        Copyright © 2020 [Carolina Analytics and Data Science](https://carolinadata.unc.edu/). All Rights Reserved
+      </ReactMarkdown>
     </div>
   );
 }

@@ -2,10 +2,26 @@
 @use "sass:map";
 
 .Directors {
+
+  .row {
+    width: 100%;
+    overflow-x: auto;
+  }
+
   .directorCard {
-    background-color: map-get($map: $theme-colors, $key: 'backgroundLight');
+    background-color: map-get($map: $theme-colors, $key: 'accent1');
     margin: 1rem;
     padding: 1rem;
-    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
