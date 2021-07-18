@@ -5,6 +5,7 @@ import Carousel, {
   arrowsPlugin,
 } from "@brainhubeu/react-carousel";
 import Button from "../Button";
+import LazyLoad from 'react-lazyload';
 import "@brainhubeu/react-carousel/lib/style.css";
 
 import "./styles.scss";
@@ -69,7 +70,9 @@ function Directors({ content }) {
             const { small } = formats;
             return (
               <div className="directorCard" key={`${Name}${Position}`}>
-                <img src={`${handleAPIURL()}${small?.url || url}`} />
+                <LazyLoad height={300} offset={100} once>
+                  <img src={`${handleAPIURL()}${small?.url || url}`} alt="" />
+                </LazyLoad>
                 <h3>{Name}</h3>
                 <div>{Position}</div>
               </div>
