@@ -22,7 +22,11 @@ h1, h2, h3, h4, h5, h6, a, strong {
 }
 
 div {
-  color: map-get($map: $theme-colors, $key: "text");
+  color: map-get($map: $theme-colors, $key: "secondary");
+}
+
+strong {
+  color: map-get($map: $theme-colors, $key: "accent2");
 }
 
 button, input[type="submit"], input[type="reset"] {
@@ -33,7 +37,6 @@ button, input[type="submit"], input[type="reset"] {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-  width: 100%;
 }
 
 .row {

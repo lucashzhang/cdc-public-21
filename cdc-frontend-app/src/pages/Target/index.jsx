@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { handleAPIURL } from "../../utilities/util";
-import { useParams, useHistory } from "react-router";
+import { useParams, useHistory } from "react-router-dom";
 import About from "../../components/About";
 import FAQ from "../../components/FAQ";
 

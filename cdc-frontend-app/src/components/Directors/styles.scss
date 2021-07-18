@@ -3,25 +3,18 @@
 
 .Directors {
 
-  .row {
-    width: 100%;
-    overflow-x: auto;
-  }
-
   .directorCard {
     background-color: map-get($map: $theme-colors, $key: 'accent1');
-    margin: 1rem;
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 
-    &:first-child {
-      margin-left: 0;
+    img {
+      width: calc(min(300px, calc(95vw - 5rem)));
+      height: auto;
     }
+  }
 
-    &:last-child {
-      margin-right: 0;
-    }
+  .carouselButton {
+    width: 4rem;
   }
 }
