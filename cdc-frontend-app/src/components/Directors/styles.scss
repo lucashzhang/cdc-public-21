@@ -4,8 +4,8 @@
 .Directors {
 
   .directorCard {
-    background-color: map-get($map: $theme-colors, $key: 'accent1');
-    padding: 1rem;
+    background-color: map-get($map: $theme-colors, $key: 'primaryAlt');
+    padding-bottom: 1rem;
     text-align: center;
 
     img {

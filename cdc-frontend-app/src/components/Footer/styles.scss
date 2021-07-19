@@ -3,7 +3,7 @@
 
 .Footer {
   height: 300px;
-  background: map-get($map: $theme-colors, $key: "accent1");
+  background: map-get($map: $theme-colors, $key: "primaryAlt");
   margin-top: 4rem;
   display: flex;
   align-items: center;

@@ -45,11 +45,14 @@ function Directors({ content }) {
           plugins={["infinite", slidesMod(4), arrowsMod, autoPlayMod]}
           breakpoints={{
             640: {
-              plugins: ["infinite", slidesMod(2), autoPlayMod],
-            },
-            900: {
               plugins: ["infinite", slidesMod(1), autoPlayMod],
             },
+            1080: {
+              plugins: ["infinite", slidesMod(2), autoPlayMod],
+            },
+            1500: {
+              plugins: ["infinite", slidesMod(3), autoPlayMod],
+            }
           }}
           animationSpeed={1000}
         >

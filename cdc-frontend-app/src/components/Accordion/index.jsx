@@ -19,6 +19,10 @@ function Accordion({ id, header, body }) {
           backgroundColor: isOpen ? theme.secondary : theme.accent1,
           color: isOpen ? theme.primary : theme.text,
         }}
+        // whileHover={{
+        //   backgroundColor: theme.secondary,
+        //   color: theme.primary,
+        // }}
         onClick={() => setIsOpen(!isOpen)}
         className="Accordion-header"
       >
