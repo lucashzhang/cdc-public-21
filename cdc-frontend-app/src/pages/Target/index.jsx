@@ -39,7 +39,7 @@ function Target() {
   }
 
   return (
-    <div className="App-Content">
+    <div className="App-Sections">
       {pageContent["Sections"] &&
         pageContent["Sections"].map((section) => handleSection(section))}
     </div>

@@ -23,10 +23,10 @@ function Landing() {
   }, []);
 
   return (
-    <div className="App-Content">
-      <About content={pageContent["Description"]} />
-      <FAQ contents={pageContent["FAQ"]} />
-      <Directors content={pageContent["Directors"]} />
+    <div className="App-Sections">
+      <About content={pageContent["Description"]} id="#about" />
+      <FAQ contents={pageContent["FAQ"]} id="#faq" />
+      <Directors content={pageContent["Directors"]} id="#directors" />
     </div>
   );
 }

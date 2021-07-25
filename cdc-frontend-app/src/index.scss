@@ -5,7 +5,11 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: map-get($map: $theme-colors, $key: "primary");
+  background-image: url("./assets/BackgroundFrame-01.svg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  // background-color: map-get($map: $theme-colors, $key: "primary");
 }
 
 code {
@@ -73,6 +77,10 @@ input[type="reset"] {
 }
 
 .App-Content {
+  background-color: rgba(255,255,255,0.75);
+}
+
+.App-Sections {
   width: 90%;
   max-width: 1600px;
   margin: 0px auto;

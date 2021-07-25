@@ -1,19 +1,23 @@
 import React from "react";
+import Navbar from "../../components/Navbar";
 import Hero from "../../components/Hero";
 import Footer from "../../components/Footer";
 import Landing from "../Landing";
-import Target from '../Target';
+import Target from "../Target";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles.scss";
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Hero />
-      <Switch>
-        <Route path="/t/:targetId" component={Target} />
-        <Route path="/" component={Landing} />
-      </Switch>
+      <div className="App-Content">
+        <Switch>
+          <Route path="/t/:targetId" component={Target} />
+          <Route path="/" component={Landing} />
+        </Switch>
+      </div>
       <Footer />
     </Router>
   );
