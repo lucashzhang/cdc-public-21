@@ -66,8 +66,8 @@ function Directors({ content }) {
                 <LazyLoad height={300} offset={100} once>
                   <img src={`${handleAPIURL()}${small?.url || url}`} alt="" />
                 </LazyLoad>
-                <h3>{Name}</h3>
-                <div>{Position}</div>
+                <h3 className="directorName">{Name}</h3>
+                <div className="directorPosition">{Position}</div>
               </div>
             );
           })}

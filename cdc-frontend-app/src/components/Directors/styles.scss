@@ -12,6 +12,10 @@
       width: calc(min(300px, calc(95vw - 5rem)));
       height: auto;
     }
+
+    .directorPosition {
+      color: map-get($map: $theme-colors, $key: "accent2")
+    }
   }
 
   .carouselButton {
