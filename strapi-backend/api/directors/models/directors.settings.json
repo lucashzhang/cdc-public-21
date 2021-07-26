@@ -16,9 +16,6 @@
       "type": "string",
       "required": true
     },
-    "Pronouns": {
-      "type": "string"
-    },
     "Position": {
       "type": "string",
       "required": true
@@ -34,12 +31,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "Linkedin": {
-      "type": "string"
-    },
-    "Email": {
-      "type": "string"
     }
   }
 }

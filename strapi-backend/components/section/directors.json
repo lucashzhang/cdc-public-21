@@ -2,7 +2,8 @@
   "collectionName": "components_section_directors",
   "info": {
     "name": "Directors",
-    "icon": "address-card"
+    "icon": "address-card",
+    "description": ""
   },
   "options": {},
   "attributes": {

@@ -13,14 +13,14 @@ function Navbar({ links }) {
   const [isScrolling, setIsScrolling] = useState(false);
   useEffect(() => {
     function reportScroll() {
-      if (window.scrollY === 0) setIsScrolling(false);
+      if (window.scrollY === 0 && isScrolling === true) setIsScrolling(false);
       else if (isScrolling === false) setIsScrolling(true);
     }
-    const scrollListener = window.addEventListener("scroll", reportScroll);
+    window.addEventListener("scroll", reportScroll);
 
     return function cleanup() {
-      window.removeEventListener("scroll", scrollListener);
-    };
+      window.removeEventListener("scroll", reportScroll);
+    }
   }, [isScrolling]);
 
   return (
@@ -29,8 +29,8 @@ function Navbar({ links }) {
       animate={isScrolling ? "scrolling" : ""}
       className="Navbar"
     >
-      <div>
-
+      <div className="navContent">
+        <a href="#" className="navButton">Test</a>
       </div>
     </motion.nav>
   );

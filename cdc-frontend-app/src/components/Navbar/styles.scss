@@ -7,4 +7,21 @@
   height: 4rem;
   width: 100vw;
   background-color: rgba(map-get($map: $theme-colors, $key: "primary"), 0);
+
+  .navContent {
+    width: 90%;
+    height: 100%;
+    max-width: 1600px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+
+    .navButton {
+      font-size: 1.5rem;
+      &:first-child {
+        margin-left: auto;
+      }
+    }
+    
+  }
 }
