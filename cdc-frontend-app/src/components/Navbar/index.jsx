@@ -9,7 +9,7 @@ const navVariants = {
   },
 };
 
-function Navbar({ links }) {
+function Navbar() {
   const [isScrolling, setIsScrolling] = useState(false);
   useEffect(() => {
     function reportScroll() {

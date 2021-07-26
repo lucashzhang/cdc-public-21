@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { handleAPIURL } from "../../utilities/util";
+import { handleEndpoint } from "../../utilities/util";
 
 import About from "../../components/About";
 import FAQ from "../../components/FAQ";
@@ -9,16 +9,10 @@ function Landing() {
   const [pageContent, setPageContent] = useState({});
 
   useEffect(() => {
-    const controller = new AbortController();
-    const signal = controller.signal;
-
-    fetch(`${handleAPIURL()}/home`, { signal }).then(async (data) => {
-      const contents = await data.json();
-      setPageContent(contents);
-    });
+    const controller = handleEndpoint('home', setPageContent)
 
     return () => {
-      controller.abort();
+      controller?.abort?.();
     };
   }, []);
 

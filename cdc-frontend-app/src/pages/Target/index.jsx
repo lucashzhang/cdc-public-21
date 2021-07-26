@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { handleAPIURL } from "../../utilities/util";
+import { handleEndpoint } from "../../utilities/util";
 import { useParams, useHistory } from "react-router-dom";
 import About from "../../components/About";
 import FAQ from "../../components/FAQ";
@@ -10,19 +10,10 @@ function Target() {
   const history = useHistory();
 
   useEffect(() => {
-    const controller = new AbortController();
-    const signal = controller.signal;
-
-    fetch(`${handleAPIURL()}/targets?UID=${targetId}`, { signal }).then(
-      async (data) => {
-        const contents = await data.json();
-        if (contents.length === 0) history.push("/");
-        setPageContent(contents[0]);
-      }
-    );
+    const controller = handleEndpoint(`targets?UID=${targetId}`, setPageContent);
 
     return () => {
-      controller.abort();
+      controller?.abort?.();
     };
   }, [targetId, history]);
 
@@ -37,6 +28,8 @@ function Target() {
         return null;
     }
   }
+
+  console.log(pageContent[0])
 
   return (
     <div className="App-Sections">
