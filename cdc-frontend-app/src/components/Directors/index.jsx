@@ -1,60 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { handleAPIURL } from "../../utilities/util";
-import Carousel, {
-  slidesToShowPlugin,
-  arrowsPlugin,
-  autoplayPlugin,
-} from "@brainhubeu/react-carousel";
-import Button from "../Button";
-import LazyLoad from "react-lazyload";
-import "@brainhubeu/react-carousel/lib/style.css";
+import WrappedCarousel from "../Carousel";
+import LazyLoad from 'react-lazyload';
 
 import "./styles.scss";
 
-const arrowsMod = {
-  resolve: arrowsPlugin,
-  options: {
-    arrowLeft: <Button className="carouselButton">{"<"}</Button>,
-    arrowRight: <Button className="carouselButton">{">"}</Button>,
-    addArrowClickHandler: true,
-  },
-};
-
-const autoPlayMod = {
-  resolve: autoplayPlugin,
-  options: {
-    interval: 4000,
-  },
-};
-
-const slidesMod = (numSlides) => ({
-  resolve: slidesToShowPlugin,
-  options: {
-    numberOfSlides: numSlides,
-  },
-});
-
 function Directors({ content }) {
+
   return content ? (
     <div className="Directors">
       <header>
         <h1>Directors</h1>
       </header>
       <div className="container">
-        <Carousel
-          plugins={["infinite", slidesMod(4), arrowsMod, autoPlayMod]}
-          breakpoints={{
-            640: {
-              plugins: ["infinite", slidesMod(1), autoPlayMod],
-            },
-            1080: {
-              plugins: ["infinite", slidesMod(2), autoPlayMod],
-            },
-            1500: {
-              plugins: ["infinite", slidesMod(3), autoPlayMod],
-            }
-          }}
-          animationSpeed={1000}
+        <WrappedCarousel
+          
         >
           {(content.directors ?? []).map((director) => {
             if (director == null) return null;
@@ -71,7 +31,7 @@ function Directors({ content }) {
               </div>
             );
           })}
-        </Carousel>
+        </WrappedCarousel>
       </div>
     </div>
   ) : null;

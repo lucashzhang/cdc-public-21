@@ -21,7 +21,7 @@ const pathVariants = {
   },
 };
 
-function Button({ className, children }) {
+function Button({ className, children, onClick }) {
   return (
     <motion.button
       className={`Button ${className || ""}`}
@@ -29,6 +29,7 @@ function Button({ className, children }) {
       initial="passive"
       whileTap="after"
       whileHover="active"
+      onClick={onClick}
     >
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
