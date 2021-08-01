@@ -40,7 +40,7 @@
     max-width: 1000px;
     margin-right: 2rem;
     margin-left: 2rem;
-    transform: rotateY(24deg) rotateX(16deg);
+    transform: rotateY(24deg) rotateX(16deg) scale(-1, 1);
 
     .page-display-carousel {
       width: 640px;
@@ -56,21 +56,19 @@
       }
     }
 
-    @media only screen and (max-width: 992px) {
-      transform: rotateY(0deg) rotateX(0deg);
-      margin-right: 1rem;
-      margin-left: 1rem;
-      width: calc(100vw);
-      height: calc(calc(100vw) / 16 * 9);
+    .page-display-collage {
+      background-color: red;
+      height: 20px;
+      width: 20px;
+      margin: 2px;
+    }
 
-      .page-display-video {
-        width: calc(80vw);
-        height: calc(calc(80vw) / 16 * 9);
-      }
+    @media only screen and (max-width: 992px) {
+      display: none;
     }
   }
 
-  .PageCard {
+  .ListCard {
     display: block;
     padding: 1rem;
     background-color: map-get($map: $theme-colors, $key: "accent1");

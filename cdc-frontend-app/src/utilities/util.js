@@ -13,11 +13,10 @@ export function handleEndpoint(endpoint, setter) {
   const saved = window.localStorage.getItem(`api.cdcunc.com/${endpoint}`);
   saved && setter(JSON.parse(saved));
 
-  fetch(`${handleAPIURL()}/${endpoint}`, { signal }).then(async (data) => {
-    let contents = await data.json();
+  fetch(`${handleAPIURL()}/${endpoint}`, { signal }).then(data => data.json()).then(contents => {
     window.localStorage.setItem(`api.cdcunc.com/${endpoint}`, JSON.stringify(contents))
     setter(contents);
-  });
+  }).catch(error => console.error(error));
 
   return controller;
 }

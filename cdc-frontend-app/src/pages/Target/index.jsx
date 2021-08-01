@@ -10,6 +10,7 @@ function Target() {
   const history = useHistory();
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     const controller = handleEndpoint(`targets?UID=${targetId}&_limit=1`, setPageContent);
 
     return () => {

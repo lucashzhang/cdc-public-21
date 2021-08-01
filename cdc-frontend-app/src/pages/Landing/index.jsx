@@ -10,6 +10,7 @@ function Landing() {
   const [pageContent, setPageContent] = useState({});
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     const controller = handleEndpoint("home", setPageContent);
 
     return () => {
@@ -20,9 +21,9 @@ function Landing() {
   return (
     <div className="App-Sections">
       <About content={pageContent["Description"]} id="#about" />
-      <FAQ contents={pageContent["FAQ"]} id="#faq" />
       <PageDisplay />
-      <Directors content={pageContent["Directors"]} id="#directors" />
+      <FAQ contents={pageContent["FAQ"]} id="#faq" />
+      <Directors id="#directors" />
     </div>
   );
 }

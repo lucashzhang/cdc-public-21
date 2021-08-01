@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { handleEndpoint } from "../../utilities/util";
-import PageCard from "./PageCard";
+import ListCard from "./ListCard";
 import GridAnimation from "../GridAnimation";
-import WrappedCarousel from "../Carousel";
+import Collage from "../Collage";
 import "./styles.scss";
 
 function PageDisplay() {
@@ -17,35 +17,20 @@ function PageDisplay() {
       <div className="row">
         <div className="container page-display-grid-container">
           <GridAnimation>
-            <div className="page-display-carousel">
-              <WrappedCarousel max={1}>
-                <PageCard title="Hackathon" to="/hackathon" />
-                <PageCard title="Data Conference" to="/conference" />
-                {targets.map(
-                  (target) =>
-                    target["Name"] && (
-                      <PageCard
-                        title={target["Name"]}
-                        to={`/t/${target["UID"]}`}
-                        key={target["UID"]}
-                      />
-                    )
-                )}
-              </WrappedCarousel>
-            </div>
+            <Collage/>
           </GridAnimation>
         </div>
         <div className="page-display-content">
           <header>
-            <h1>Pages</h1>
+            <h1>Learn More</h1>
           </header>
           <div className="page-display-list container">
-            <PageCard title="Hackathon" to="/hackathon" />
-            <PageCard title="Data Conference" to="/conference" />
+            <ListCard title="Hackathon" to="/hackathon" />
+            <ListCard title="Data Conference" to="/conference" />
             {targets.map(
               (target) =>
                 target["Name"] && (
-                  <PageCard
+                  <ListCard
                     title={target["Name"]}
                     to={`/t/${target["UID"]}`}
                     key={target["UID"]}
