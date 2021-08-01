@@ -15,7 +15,6 @@ export function handleEndpoint(endpoint, setter) {
 
   fetch(`${handleAPIURL()}/${endpoint}`, { signal }).then(async (data) => {
     let contents = await data.json();
-    if (contents.length) contents = contents[0]
     window.localStorage.setItem(`api.cdcunc.com/${endpoint}`, JSON.stringify(contents))
     setter(contents);
   });

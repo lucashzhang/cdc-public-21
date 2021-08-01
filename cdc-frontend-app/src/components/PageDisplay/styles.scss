@@ -1,0 +1,89 @@
+@import "../../utilities/theme";
+@use "sass:map";
+
+.PageDisplay {
+  height: 700px;
+
+  @media only screen and (max-width: 992px) {
+    height: auto;
+  }
+
+  .row {
+    perspective: 1800px;
+    height: 100%;
+    align-items: center;
+
+    @media only screen and (max-width: 992px) {
+      perspective: none;
+      flex-direction: column;
+    }
+  }
+
+  .page-display-content {
+    width: 100%;
+
+    @media only screen and (max-width: 992px) {
+      max-width: 100%;
+    }
+
+    .page-display-list {
+      max-height: 320px;
+      overflow-y: auto;
+    }
+  }
+
+  .page-display-grid-container {
+    position: relative;
+    margin-left: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    transform: rotateY(24deg) rotateX(16deg);
+
+    .page-display-carousel {
+      width: 640px;
+      height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .carouselButton {
+        width: 4rem;
+        position: relative;
+        z-index: 10;
+      }
+    }
+
+    @media only screen and (max-width: 992px) {
+      transform: rotateY(0deg) rotateX(0deg);
+      margin-right: 1rem;
+      margin-left: 1rem;
+      width: calc(100vw);
+      height: calc(calc(100vw) / 16 * 9);
+
+      .page-display-video {
+        width: calc(80vw);
+        height: calc(calc(80vw) / 16 * 9);
+      }
+    }
+  }
+
+  .PageCard {
+    display: block;
+    padding: 1rem;
+    background-color: map-get($map: $theme-colors, $key: "accent1");
+    color: map-get($map: $theme-colors, $key: "primary");
+    margin-bottom: 1rem;
+    text-decoration: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: 992px) {
+      max-width: 500px;
+    }
+  }
+}

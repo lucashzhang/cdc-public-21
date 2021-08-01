@@ -17,7 +17,7 @@ function Accordion({ id, header, body }) {
         initial={false}
         animate={{
           backgroundColor: isOpen ? theme.secondary : theme.accent1,
-          color: isOpen ? theme.primary : theme.text,
+          color: theme.primary,
         }}
         // whileHover={{
         //   backgroundColor: theme.secondary,

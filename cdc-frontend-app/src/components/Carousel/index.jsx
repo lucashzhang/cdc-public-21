@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Children } from "react";
+import React from "react";
 import Carousel, {
   slidesToShowPlugin,
   arrowsPlugin,
@@ -13,38 +13,23 @@ const slidesMod = (numSlides) => ({
   },
 });
 
-function WrappedCarousel({ children, interval = 3000, max = 4 }) {
-  const [slide, setSlide] = useState(0);
+function WrappedCarousel({ children, max = 4 }) {
 
-  useEffect(() => {
-    const carousel = setInterval(() => {
-      const totalSlides = Children.count(children) ?? 0;
-      setSlide((prevState) => (prevState + 1) % totalSlides);
-    }, interval);
-
-    return function cleanup() {
-      clearInterval(carousel);
-    };
-  }, [children, interval]);
-
-  function onChange(val) {
-    const totalSlides = Children.count(children) ?? 0;
-    setSlide(Math.max(val % totalSlides, 0));
-  }
 
   const arrowsMod = {
     resolve: arrowsPlugin,
     options: {
       arrowLeft: (
-        <Button className="carouselButton" onClick={() => onChange(slide - 1)}>
+        <Button className="carouselButton">
           {"<"}
         </Button>
       ),
       arrowRight: (
-        <Button className="carouselButton" onClick={() => onChange(slide + 1)}>
+        <Button className="carouselButton">
           {">"}
         </Button>
       ),
+      addArrowClickHandler: true
     },
   };
 
@@ -62,7 +47,6 @@ function WrappedCarousel({ children, interval = 3000, max = 4 }) {
           plugins: [slidesMod(max - 1)],
         },
       }}
-      value={slide}
     >
       {children}
     </Carousel>

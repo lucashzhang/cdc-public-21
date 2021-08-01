@@ -10,7 +10,7 @@ function Target() {
   const history = useHistory();
 
   useEffect(() => {
-    const controller = handleEndpoint(`targets?UID=${targetId}`, setPageContent);
+    const controller = handleEndpoint(`targets?UID=${targetId}&_limit=1`, setPageContent);
 
     return () => {
       controller?.abort?.();
@@ -29,12 +29,10 @@ function Target() {
     }
   }
 
-  console.log(pageContent[0])
-
   return (
     <div className="App-Sections">
-      {pageContent["Sections"] &&
-        pageContent["Sections"].map((section) => handleSection(section))}
+      {pageContent[0] && pageContent[0]["Sections"] &&
+        pageContent[0]["Sections"].map((section) => handleSection(section))}
     </div>
   );
 }
