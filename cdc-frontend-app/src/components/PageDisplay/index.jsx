@@ -22,7 +22,7 @@ function PageDisplay() {
         </div>
         <div className="page-display-content">
           <header>
-            <h1>Learn More</h1>
+            <h1>Our Event</h1>
           </header>
           <div className="page-display-list container">
             <ListCard title="Hackathon" to="/hackathon" />

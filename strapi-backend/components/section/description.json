@@ -7,11 +7,14 @@
   },
   "options": {},
   "attributes": {
-    "Header": {
+    "header": {
       "type": "string"
     },
-    "Content": {
+    "content": {
       "type": "richtext"
+    },
+    "video": {
+      "type": "string"
     }
   }
 }

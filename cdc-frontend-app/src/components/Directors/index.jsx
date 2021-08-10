@@ -21,14 +21,14 @@ function Directors() {
           <WrappedCarousel>
             {directors.map((director) => {
               if (director == null) return null;
-              const { Name, Position, Picture } = director;
-              const { url, formats } = Picture;
+              const { name, position, picture } = director;
+              const { url, formats } = picture;
               const { small } = formats;
               return (
-                <div className="directorCard" key={`${Name}${Position}`}>
-                  <img src={`${handleAPIURL()}${small?.url || url}`} alt="" />
-                  <h3 className="directorName">{Name}</h3>
-                  <div className="directorPosition">{Position}</div>
+                <div className="directorCard" key={`${name}${position}`}>
+                  <img src={`${handleAPIURL()}${small?.url || url || ""}`} alt="" />
+                  <h3 className="directorName">{name}</h3>
+                  <div className="directorPosition">{position}</div>
                 </div>
               );
             })}

@@ -11,10 +11,10 @@ function FAQ({ contents }) {
       <div className="row">
         {contents['faqs'].map((qa) => (
           <Accordion
-            id={qa.Question}
-            key={qa.Question}
-            header={qa.Question}
-            body={qa.Answer}
+            id={qa.question}
+            key={qa.question}
+            header={qa.question}
+            body={qa.answer}
           />
         ))}
       </div>

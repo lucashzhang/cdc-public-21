@@ -4,27 +4,28 @@ import GridAnimation from "../GridAnimation";
 import "./styles.scss";
 
 function About({ content }) {
+  console.log(content)
   return content ? (
     <div className="About">
       <div className="row">
         <div className="about-text">
           <header>
-            <h1>{content["Header"] ?? "About"}</h1>
+            <h1>{content["header"] ?? "About"}</h1>
           </header>
           <ReactMarkdown className="container">
-            {content["Content"]}
+            {content["content"]}
           </ReactMarkdown>
         </div>
         <div className="container about-video-container">
           <GridAnimation>
-            <iframe
+            {content["video"] && <iframe
               className="about-video dropshadow"
-              src="https://www.youtube.com/embed/6FnwAbd2SDY"
+              src={content["video"]}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               frameBorder="0"
-            ></iframe>
+            ></iframe>}
           </GridAnimation>
         </div>
       </div>

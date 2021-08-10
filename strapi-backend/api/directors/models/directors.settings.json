@@ -12,15 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Position": {
+    "position": {
       "type": "string",
       "required": true
     },
-    "Picture": {
+    "picture": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
