@@ -3,6 +3,7 @@ import Carousel, {
   slidesToShowPlugin,
   arrowsPlugin,
 } from "@brainhubeu/react-carousel";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 import Button from "../Button";
 import "@brainhubeu/react-carousel/lib/style.css";
 
@@ -14,22 +15,20 @@ const slidesMod = (numSlides) => ({
 });
 
 function WrappedCarousel({ children, max = 4 }) {
-
-
   const arrowsMod = {
     resolve: arrowsPlugin,
     options: {
       arrowLeft: (
         <Button className="carouselButton">
-          {"<"}
+          <ChevronLeftIcon />
         </Button>
       ),
       arrowRight: (
         <Button className="carouselButton">
-          {">"}
+          <ChevronRightIcon />
         </Button>
       ),
-      addArrowClickHandler: true
+      addArrowClickHandler: true,
     },
   };
 
@@ -53,4 +52,4 @@ function WrappedCarousel({ children, max = 4 }) {
   );
 }
 
-export default WrappedCarousel
+export default WrappedCarousel;

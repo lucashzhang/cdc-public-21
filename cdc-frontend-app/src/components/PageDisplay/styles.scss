@@ -73,13 +73,19 @@
   }
 
   .ListCard {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 1rem;
     background-color: map-get($map: $theme-colors, $key: "accent1");
     color: map-get($map: $theme-colors, $key: "primary");
     margin-bottom: 1rem;
     text-decoration: none;
     transition: 0.3s;
+
+    svg {
+      margin-left: auto;
+      height: 1.2rem;
+    }
 
     &:last-child {
       margin-bottom: 0;
