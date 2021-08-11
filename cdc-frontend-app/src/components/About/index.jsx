@@ -1,10 +1,11 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import GridAnimation from "../GridAnimation";
+import Collage from "../Collage";
 import "./styles.scss";
 
 function About({ content }) {
-  console.log(content)
+  console.log(content);
   return content ? (
     <div className="About">
       <div className="row">
@@ -18,14 +19,18 @@ function About({ content }) {
         </div>
         <div className="container about-video-container">
           <GridAnimation>
-            {content["video"] && <iframe
-              className="about-video dropshadow"
-              src={content["video"]}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              frameBorder="0"
-            ></iframe>}
+            {content["video"] ? (
+              <iframe
+                className="about-video dropshadow"
+                src={content["video"]}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                frameBorder="0"
+              ></iframe>
+            ) : (
+              <Collage />
+            )}
           </GridAnimation>
         </div>
       </div>
