@@ -6,11 +6,11 @@ import LazyLoad from "react-lazyload";
 import "./styles.scss";
 
 function Directors() {
-  const [directors, setDirectors] = useState([]);
+  const [directors, setDirectors] = useState();
   useEffect(() => {
     handleEndpoint("directors", setDirectors);
   }, []);
-  
+
   return directors ? (
     <div className="Directors">
       <header>
@@ -18,8 +18,8 @@ function Directors() {
       </header>
       <div className="container">
         <LazyLoad height={300} offset={100} once>
-          <WrappedCarousel>
-            {directors.map((director) => {
+          {directors && <WrappedCarousel>
+            {directors?.map((director) => {
               if (director == null) return null;
               const { name, position, picture } = director;
               const { url, formats } = picture;
@@ -32,7 +32,7 @@ function Directors() {
                 </div>
               );
             })}
-          </WrappedCarousel>
+          </WrappedCarousel>}
         </LazyLoad>
       </div>
     </div>

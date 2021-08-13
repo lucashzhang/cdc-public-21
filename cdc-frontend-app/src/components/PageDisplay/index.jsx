@@ -6,7 +6,7 @@ import Collage from "../Collage";
 import "./styles.scss";
 
 function PageDisplay() {
-  const [targets, setTargets] = useState([]);
+  const [targets, setTargets] = useState();
 
   useEffect(() => {
     handleEndpoint("targets", setTargets);
@@ -27,7 +27,7 @@ function PageDisplay() {
           <div className="page-display-list container">
             <ListCard title="Hackathon" to="/hackathon" />
             <ListCard title="Data Conference" to="/conference" />
-            {targets.map(
+            {targets && targets?.map(
               (target) =>
                 target["Name"] && (
                   <ListCard
