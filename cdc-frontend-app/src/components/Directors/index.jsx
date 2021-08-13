@@ -18,7 +18,7 @@ function Directors() {
       </header>
       <div className="container">
         <LazyLoad height={300} offset={100} once>
-          {directors && <WrappedCarousel>
+          {directors && directors.length !== 0 && <WrappedCarousel>
             {directors?.map((director) => {
               if (director == null) return null;
               const { name, position, picture } = director;
