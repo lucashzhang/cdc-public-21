@@ -42,20 +42,6 @@
     margin-left: 2rem;
     transform: rotateY(24deg) rotateX(16deg);
 
-    .page-display-carousel {
-      width: 640px;
-      height: 360px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .carouselButton {
-        width: 4rem;
-        position: relative;
-        z-index: 10;
-      }
-    }
-
     .page-display-collage {
       background-color: red;
       height: 20px;
@@ -96,7 +82,9 @@
     }
 
     @media only screen and (max-width: 992px) {
-      max-width: 500px;
+      max-width: 468px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

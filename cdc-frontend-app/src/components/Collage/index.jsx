@@ -39,7 +39,7 @@ function Collage() {
       </CollageItem>
       <CollageItem
         color="accent2"
-        position={{ bottom: '25%', right: '22%' }}
+        position={{ bottom: '22%', right: '22%' }}
         size='22%'
       >
         <ChartPieIcon />

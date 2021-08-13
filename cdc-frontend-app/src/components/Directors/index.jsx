@@ -6,7 +6,7 @@ import LazyLoad from "react-lazyload";
 import "./styles.scss";
 
 function Directors() {
-  const [directors, setDirectors] = useState();
+  const [directors, setDirectors] = useState([]);
   useEffect(() => {
     handleEndpoint("directors", setDirectors);
   }, []);
