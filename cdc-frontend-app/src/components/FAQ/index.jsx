@@ -4,7 +4,7 @@ import "./styles.scss";
 
 function FAQ({ contents }) {
   return contents ? (
-    <div className="FAQ">
+    <div className="FAQ" id="faq">
       <header>
         <h1>FAQ</h1>
       </header>

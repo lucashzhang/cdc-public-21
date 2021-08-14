@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { HashLink as Link } from "react-router-hash-link"
 import "./styles.scss";
 
 const navVariants = {
@@ -30,7 +31,7 @@ function Navbar() {
       className="Navbar"
     >
       <div className="navContent">
-        <a href="#" className="navButton">Test</a>
+        <Link to="/#sponsors" className="navButton">Test</Link>
       </div>
     </motion.nav>
   );

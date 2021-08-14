@@ -4,7 +4,7 @@ import Carousel, {
   arrowsPlugin,
 } from "@brainhubeu/react-carousel";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
-import Button from "./Button";
+import Button from "../Button";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 const slidesMod = (numSlides) => ({

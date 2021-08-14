@@ -7,7 +7,7 @@ import "./styles.scss";
 function About({ content }) {
   console.log(content);
   return content ? (
-    <div className="About">
+    <div className="About" id="about">
       <div className="row">
         <div className="about-text">
           <header>

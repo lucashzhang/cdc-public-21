@@ -12,7 +12,7 @@ function Directors() {
     }, []);
 
     return directors && directors.length !== 0 && (
-        <div className="Directors">
+        <div className="Directors" id="directors">
             <header>
                 <h1>Directors</h1>
             </header>

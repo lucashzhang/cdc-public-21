@@ -13,7 +13,7 @@ function PageDisplay() {
   }, []);
 
   return (
-    <div className="PageDisplay">
+    <div className="PageDisplay" id="event">
       <div className="row">
         <div className="container page-display-grid-container">
           <GridAnimation>

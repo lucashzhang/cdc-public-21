@@ -24,7 +24,7 @@ function Sponsors() {
     }, []);
 
     return (
-        <div className="Sponsors">
+        <div className="Sponsors" id="sponsors">
             <header>
                 <h1>Sponsors</h1>
             </header>

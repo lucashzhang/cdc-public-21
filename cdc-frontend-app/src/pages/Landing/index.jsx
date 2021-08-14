@@ -21,11 +21,11 @@ function Landing() {
 
   return (
     <div className="App-Sections">
-      <About content={pageContent["Description"]} id="about" />
+      <About content={pageContent["Description"]} />
       <PageDisplay />
-      <FAQ contents={pageContent["FAQ"]} id="faq" />
-      <Directors id="directors" />
-      <Sponsors id="sponsors" />
+      <FAQ contents={pageContent["FAQ"]} />
+      <Directors />
+      <Sponsors />
     </div>
   );
 }
