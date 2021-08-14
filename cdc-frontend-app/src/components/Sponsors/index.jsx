@@ -23,32 +23,42 @@ function Sponsors() {
         handleEndpoint("sponsors", setSponsors);
     }, []);
 
-    return sponsors && sponsors.length !== 0 && (
+    return (
         <div className="Sponsors">
             <header>
                 <h1>Sponsors</h1>
             </header>
             <div className="row">
-                {sponsors?.map(sponsor => {
-                    const { id, name, logo, website } = sponsor;
+                {sponsors && sponsors.length !== 0 && sponsors?.map(sponsor => {
+                    const { id, logo, name, website } = sponsor;
                     const { url, formats } = logo;
                     const { small } = formats || {};
                     return (
-                        <motion.div key={id} className="sponsor-card"
+                        <motion.a key={id + name} className="sponsor-card"
                             variants={cardVariants}
                             initial="passive"
                             whileTap="after"
-                            whileHover="active">
-                            <a className="sponsor-card-img" href={website || "#"} target={website ? "_blank" : "_self"}>
-                                <LazyLoad>
-                                    <img src={`${handleAPIURL()}${small?.url || url || ""}`}></img>
-                                </LazyLoad>
-                            </a>
-                        </motion.div>
+                            whileHover="active"
+                            href={website || "#"}
+                            target={website ? "_blank" : "_self"}>
+                            <LazyLoad>
+                                <img src={`${handleAPIURL()}${small?.url || url || ""}`}></img>
+                            </LazyLoad>
+                        </motion.a>
                     )
                 })}
-            </div>
-        </div>
+                <motion.a className="sponsor-card"
+                    variants={cardVariants}
+                    initial="passive"
+                    whileTap="after"
+                    whileHover="active"
+                    href="mailto:sponsors@cdcunc.com">
+                    <h2>
+                        Interested in Sponsoring our Hackathon?
+                    </h2>
+                </motion.a>
+            </div >
+        </div >
     );
 }
 
