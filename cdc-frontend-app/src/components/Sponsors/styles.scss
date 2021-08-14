@@ -1,0 +1,26 @@
+.Sponsors {
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sponsor-card {
+        margin: 1rem;
+
+        .sponsor-card-img {
+            width: 300px;
+            height: 100px;
+            padding: 1rem;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: calc(300px);
+                height: calc(100px);
+                object-fit: contain;
+            }
+        }
+    }
+}

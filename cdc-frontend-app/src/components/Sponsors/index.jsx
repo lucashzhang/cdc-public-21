@@ -11,12 +11,25 @@ function Sponsors() {
     }, []);
 
     return sponsors && sponsors.length !== 0 && (
-        <div className="Directors">
+        <div className="Sponsors">
             <header>
                 <h1>Sponsors</h1>
             </header>
-            <div className="container">
-                
+            <div className="row">
+                {sponsors?.map(sponsor => {
+                    const { id, name, logo } = sponsor;
+                    const { url, formats } = logo;
+                    const { small } = formats || {};
+                    return (
+                        <div key={id} className="sponsor-card">
+                            <div className="sponsor-card-img">
+                                <LazyLoad>
+                                    <img src={`${handleAPIURL()}${small?.url || url || ""}`}></img>
+                                </LazyLoad>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     );
