@@ -42,8 +42,8 @@ function WrappedCarousel({ children, max = 4 }) {
         1080: {
           plugins: [slidesMod(max - 2)],
         },
-        1500: {
-          plugins: [slidesMod(max - 1)],
+        1600: {
+          plugins: [slidesMod(max - 1), arrowsMod],
         },
       }}
     >

@@ -6,6 +6,7 @@ import PageDisplay from "../../components/PageDisplay";
 import FAQ from "../../components/FAQ";
 import Directors from "../../components/Directors";
 import Sponsors from "../../components/Sponsors";
+import Button from "../../components/Button";
 
 function Landing() {
   const [pageContent, setPageContent] = useState({});

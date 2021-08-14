@@ -59,17 +59,14 @@
   }
 
   .ListCard {
-
     padding: 0 2rem 0 1rem;
     background-color: map-get($map: $theme-colors, $key: "accent1");
     margin-bottom: 1rem;
-
-    .listcard-link {
-      color: map-get($map: $theme-colors, $key: "primary");
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
+    color: map-get($map: $theme-colors, $key: "primary");
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
 
     svg {
       margin-left: auto;
@@ -82,6 +79,10 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:hover {
+      background-color: map-get($map: $theme-colors, $key: "accent1Alt");;
     }
 
     @media only screen and (max-width: 992px) {

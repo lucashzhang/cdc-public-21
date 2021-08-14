@@ -1,27 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
 import "./styles.scss";
-
-const buttonVariants = {
-  passive: {
-    scale: 1,
-  },
-  after: {
-    scale: 0.97,
-  },
-  active: {
-    scale: 1.03
-  }
-};
 
 function Button({ className, children, onClick }) {
   return (
-    <motion.button
+    <button
       className={`Button ${className || ""}`}
-      variants={buttonVariants}
-      initial="passive"
-      whileTap="after"
-      whileHover="active"
       onClick={onClick}
     >
       <svg
@@ -31,18 +14,14 @@ function Button({ className, children, onClick }) {
         <path d="M2,88.602540 L152,2 302,88.602540 v173.215081 L152,350.410161 2,261.807621 z" />
       </svg>
       <div className="buttonText">{children}</div>
-    </motion.button>
+    </button>
   );
 }
 
 export function ButtonLink({ className, children, to }) {
   return (
-    <motion.a
+    <a
       className={`Button ${className || ""}`}
-      variants={buttonVariants}
-      initial="passive"
-      whileTap="after"
-      whileHover="active"
       href={to}
       target="_blank"
     >
@@ -53,7 +32,7 @@ export function ButtonLink({ className, children, to }) {
         <path d="M2,88.602540 L152,2 302,88.602540 v173.215081 L152,350.410161 2,261.807621 z" />
       </svg>
       <div className="buttonText">{children}</div>
-    </motion.a>
+    </a>
   );
 }
 

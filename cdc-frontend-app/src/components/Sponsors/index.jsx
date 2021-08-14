@@ -1,21 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { handleAPIURL, handleEndpoint } from "../../utilities/util";
-import { motion } from "framer-motion"
 import LazyLoad from "react-lazyload";
 
 import "./styles.scss";
-
-const cardVariants = {
-    passive: {
-        scale: 1
-    },
-    after: {
-        scale: 0.97,
-    },
-    active: {
-        scale: 1.03
-    }
-}
 
 function Sponsors() {
     const [sponsors, setSponsors] = useState([]);
@@ -34,29 +21,21 @@ function Sponsors() {
                     const { url, formats } = logo;
                     const { small } = formats || {};
                     return (
-                        <motion.a key={id + name} className="sponsor-card"
-                            variants={cardVariants}
-                            initial="passive"
-                            whileTap="after"
-                            whileHover="active"
+                        <a key={id + name} className="sponsor-card"
                             href={website || "#sponsors"}
                             target={website ? "_blank" : "_self"}>
                             <LazyLoad>
                                 <img src={`${handleAPIURL()}${small?.url || url || ""}`}></img>
                             </LazyLoad>
-                        </motion.a>
+                        </a>
                     )
                 })}
-                <motion.a className="sponsor-card"
-                    variants={cardVariants}
-                    initial="passive"
-                    whileTap="after"
-                    whileHover="active"
+                <a className="sponsor-card"
                     href="mailto:sponsors@cdcunc.com">
                     <h2>
                         Interested in Sponsoring our Hackathon?
                     </h2>
-                </motion.a>
+                </a>
             </div >
         </div >
     );

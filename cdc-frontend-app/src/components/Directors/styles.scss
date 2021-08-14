@@ -4,13 +4,15 @@
 .Directors {
 
   .directorCard {
-    background-color: map-get($map: $theme-colors, $key: 'primaryAlt');
+    background-color: map-get($map: $theme-colors, $key: 'primary');
     padding-bottom: 1rem;
     text-align: center;
 
     img {
       width: calc(min(300px, calc(95vw - 5rem)));
-      height: auto;
+      height: calc(min(300px, calc(95vw - 5rem)));
+      object-fit: contain;
+      object-position: center;
     }
 
     .directorPosition {

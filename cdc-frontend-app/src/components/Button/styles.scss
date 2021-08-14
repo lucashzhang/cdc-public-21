@@ -15,4 +15,15 @@
     color: map-get($map: $theme-colors, $key: "primary");
     font-size: 3em;
   }
+
+  svg {
+    transition: 0.3s;
+    fill: map-get($map: $theme-colors, $key: "accent1");
+  }
+
+  &:hover {
+    svg {
+      fill: map-get($map: $theme-colors, $key: "accent1Alt");
+    }
+  }
 }

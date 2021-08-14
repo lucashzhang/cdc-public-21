@@ -11,9 +11,9 @@
         margin: 1rem;
         width: 300px;
         height: 100px;
-        background-color: white;
         padding: 1rem;
-
+        background-color: white;
+        transition: 0.3s;
 
         img {
             width: calc(300px);
@@ -24,9 +24,13 @@
         &:last-child {
             background-color: map-get($map: $theme-colors, $key: "accent1");
             text-decoration: none;
-             h2 {
+            h2 {
                 color: map-get($map: $theme-colors, $key: "primary");
-             }
+            }
+
+            &:hover {
+                background-color: map-get($map: $theme-colors, $key: "accent1Alt");
+            }
         }
     }
 }

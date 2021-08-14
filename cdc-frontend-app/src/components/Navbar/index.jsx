@@ -31,7 +31,7 @@ function Navbar() {
       className="Navbar"
     >
       <div className="navContent">
-        <Link to="/#sponsors" className="navButton">Test</Link>
+        <Link to="#sponsors" className="navButton" smooth>Test</Link>
       </div>
     </motion.nav>
   );

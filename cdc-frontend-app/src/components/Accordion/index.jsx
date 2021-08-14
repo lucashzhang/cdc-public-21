@@ -24,7 +24,7 @@ function Accordion({ id, header, body }) {
         //   color: theme.primary,
         // }}
         onClick={() => setIsOpen(!isOpen)}
-        className="Accordion-header"
+        className="accordion-header"
       >
         <h4>{header}</h4>
       </motion.button>
