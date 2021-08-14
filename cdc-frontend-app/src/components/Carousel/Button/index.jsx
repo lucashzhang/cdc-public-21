@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import theme from "../../../utilities/theme.module.scss";
 import "./styles.scss";
 
 const buttonVariants = {
