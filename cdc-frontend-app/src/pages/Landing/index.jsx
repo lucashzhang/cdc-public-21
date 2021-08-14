@@ -5,6 +5,7 @@ import About from "../../components/About";
 import PageDisplay from "../../components/PageDisplay";
 import FAQ from "../../components/FAQ";
 import Directors from "../../components/Directors";
+import Sponsors from "../../components/Sponsors";
 
 function Landing() {
   const [pageContent, setPageContent] = useState({});
@@ -20,10 +21,11 @@ function Landing() {
 
   return (
     <div className="App-Sections">
-      <About content={pageContent["Description"]} id="#about" />
+      <About content={pageContent["Description"]} id="about" />
       <PageDisplay />
-      <FAQ contents={pageContent["FAQ"]} id="#faq" />
-      <Directors id="#directors" />
+      <FAQ contents={pageContent["FAQ"]} id="faq" />
+      <Directors id="directors" />
+      <Sponsors id="sponsors" />
     </div>
   );
 }
