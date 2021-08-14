@@ -39,7 +39,7 @@ function Sponsors() {
                             initial="passive"
                             whileTap="after"
                             whileHover="active"
-                            href={website || "#"}
+                            href={website || "#sponsors"}
                             target={website ? "_blank" : "_self"}>
                             <LazyLoad>
                                 <img src={`${handleAPIURL()}${small?.url || url || ""}`}></img>

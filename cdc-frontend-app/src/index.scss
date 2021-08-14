@@ -27,6 +27,7 @@ h6 {
   font-family: futura-pt, sans-serif;
   font-weight: 700;
   font-style: normal;
+  margin: 1rem;
 }
 
 div,
@@ -78,6 +79,7 @@ input[type="reset"] {
 
 .App-Content {
   background-color: rgba(map-get($map: $theme-colors, $key: "primaryAlt"), 0.75);
+  padding-bottom: 3rem;
 }
 
 .App-Sections {
