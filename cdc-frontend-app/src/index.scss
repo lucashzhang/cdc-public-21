@@ -77,7 +77,7 @@ input[type="reset"] {
 }
 
 .App-Content {
-  background-color: rgba(map-get($map: $theme-colors, $key: "primary"), 0.75);
+  background-color: rgba(map-get($map: $theme-colors, $key: "primaryAlt"), 0.75);
 }
 
 .App-Sections {
