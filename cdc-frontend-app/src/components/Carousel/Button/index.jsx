@@ -10,6 +10,9 @@ const buttonVariants = {
   after: {
     scale: 0.95,
   },
+  active: {
+    scale: 1.05
+  }
 };
 
 const pathVariants = {

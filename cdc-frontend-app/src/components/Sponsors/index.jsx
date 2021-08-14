@@ -1,8 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { handleAPIURL, handleEndpoint } from "../../utilities/util";
+import { motion } from "framer-motion"
 import LazyLoad from "react-lazyload";
 
 import "./styles.scss";
+
+const cardVariants = {
+    passive: {
+        scale: 1
+    },
+    after: {
+        scale: 0.95,
+    },
+    active: {
+        scale: 1.05
+    }
+}
 
 function Sponsors() {
     const [sponsors, setSponsors] = useState([]);
@@ -17,17 +30,21 @@ function Sponsors() {
             </header>
             <div className="row">
                 {sponsors?.map(sponsor => {
-                    const { id, name, logo } = sponsor;
+                    const { id, name, logo, website } = sponsor;
                     const { url, formats } = logo;
                     const { small } = formats || {};
                     return (
-                        <div key={id} className="sponsor-card">
-                            <div className="sponsor-card-img">
+                        <motion.div key={id} className="sponsor-card"
+                            variants={cardVariants}
+                            initial="passive"
+                            whileTap="after"
+                            whileHover="active">
+                            <a className="sponsor-card-img" href={website || "#"} target={website ? "_blank" : "_self"}>
                                 <LazyLoad>
                                     <img src={`${handleAPIURL()}${small?.url || url || ""}`}></img>
                                 </LazyLoad>
-                            </div>
-                        </div>
+                            </a>
+                        </motion.div>
                     )
                 })}
             </div>
