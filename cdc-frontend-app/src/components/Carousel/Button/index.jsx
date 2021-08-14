@@ -7,10 +7,10 @@ const buttonVariants = {
     scale: 1,
   },
   after: {
-    scale: 0.95,
+    scale: 0.97,
   },
   active: {
-    scale: 1.05
+    scale: 1.03
   }
 };
 

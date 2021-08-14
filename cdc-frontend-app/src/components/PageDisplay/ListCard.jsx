@@ -8,19 +8,19 @@ const cardVariants = {
   passive: {
     scale: 1,
     transition: {
-      duration: 0.2
+      duration: 0.3
     }
   },
   after: {
-    scale: 0.98,
+    scale: 0.97,
     transition: {
-      duration: 0.2
+      duration: 0.3
     }
   },
   active: {
-    scale: 1.02,
+    scale: 1.03,
     transition: {
-      duration: 0.2
+      duration: 0.3
     }
   }
 }
