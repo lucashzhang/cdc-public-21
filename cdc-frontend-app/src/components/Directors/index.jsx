@@ -11,14 +11,14 @@ function Directors() {
     handleEndpoint("directors", setDirectors);
   }, []);
 
-  return directors ? (
+  return directors && directors.length !== 0 && (
     <div className="Directors">
       <header>
         <h1>Directors</h1>
       </header>
       <div className="container">
         <LazyLoad height={300} offset={100} once>
-          {directors && directors.length !== 0 && <WrappedCarousel>
+          <WrappedCarousel>
             {directors?.map((director) => {
               if (director == null) return null;
               const { name, position, picture } = director;
@@ -32,11 +32,11 @@ function Directors() {
                 </div>
               );
             })}
-          </WrappedCarousel>}
+          </WrappedCarousel>
         </LazyLoad>
       </div>
     </div>
-  ) : null;
+  );
 }
 
 export default Directors;
