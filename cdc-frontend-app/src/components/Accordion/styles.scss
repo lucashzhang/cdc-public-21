@@ -7,8 +7,11 @@
 
   button {
     width: 100%;
-    padding: 1rem;
     border-radius: 0px;
+
+    h4 {
+      color: map-get($map: $theme-colors, $key: "primary")
+    }
   }
 
   section {

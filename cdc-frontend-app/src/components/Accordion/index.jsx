@@ -26,7 +26,7 @@ function Accordion({ id, header, body }) {
         onClick={() => setIsOpen(!isOpen)}
         className="Accordion-header"
       >
-        {header}
+        <h4>{header}</h4>
       </motion.button>
       <AnimatePresence>
         {isOpen && (

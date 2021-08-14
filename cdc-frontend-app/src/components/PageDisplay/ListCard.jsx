@@ -6,7 +6,7 @@ import "./styles.scss";
 function ListCard({ title, to }) {
   return (
     <Link className="ListCard" to={to}>
-      {title}
+      <h4>{title}</h4>
       <LinkIcon />
     </Link>
   );
