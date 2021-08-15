@@ -69,7 +69,7 @@ function Navbar() {
       className="Navbar"
     >
       <div className="navContent" smooth>
-        <Link to="/#" smooth><img className="navLogo" src={logo} alt=""></img></Link>
+        <Link className="navLogo"  to="/#" smooth><img src={logo} alt=""></img></Link>
         <div className="navControls">
           <NavControls />
         </div>
