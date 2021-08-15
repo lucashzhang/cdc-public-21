@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className="Footer" id="footer">
       <ReactMarkdown>
-        Copyright © 2020 [Carolina Analytics and Data Science](https://carolinadata.unc.edu/). All Rights Reserved
+        Copyright © 2021 [Carolina Analytics and Data Science](https://carolinadata.unc.edu/). All Rights Reserved
       </ReactMarkdown>
     </div>
   );
