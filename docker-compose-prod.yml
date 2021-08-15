@@ -8,13 +8,6 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx-production/certs:/etc/nginx/certs
-  strapi:
-    image: strapi/strapi
-    volumes:
-      - ./strapi-backend:/srv/app
-    environment: 
-      - NODE_ENV=production
-      - VIRTUAL_HOST=api.cdcunc.com
   react-app:
     build:
       context: ./cdc-frontend-app
@@ -22,3 +15,10 @@ services:
     environment:
       - VIRTUAL_HOST=cdcunc.com
       # - VIRTUAL_HOST=localhost
+  strapi:
+    image: strapi/strapi
+    volumes:
+      - ./strapi-backend:/srv/app
+    environment: 
+      - NODE_ENV=production
+      - VIRTUAL_HOST=api.cdcunc.com
