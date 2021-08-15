@@ -9,14 +9,6 @@ function About({ content }) {
   return content ? (
     <div className="About" id="about">
       <div className="row">
-        <div className="about-text">
-          <header>
-            <h1>{content["header"] ?? "About"}</h1>
-          </header>
-          <ReactMarkdown className="container">
-            {content["content"]}
-          </ReactMarkdown>
-        </div>
         <div className="container about-video-container">
           <GridAnimation>
             {content["video"] ? (
@@ -33,6 +25,15 @@ function About({ content }) {
             )}
           </GridAnimation>
         </div>
+        <div className="about-text">
+          <header>
+            <h1>{content["header"] ?? "About"}</h1>
+          </header>
+          <ReactMarkdown className="container">
+            {content["content"]}
+          </ReactMarkdown>
+        </div>
+
       </div>
     </div>
   ) : null;

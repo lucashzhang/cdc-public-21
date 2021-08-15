@@ -7,6 +7,8 @@
   height: 4rem;
   width: 100vw;
   background-color: rgba(map-get($map: $theme-colors, $key: "primary"), 0);
+  display: flex;
+  align-items: center;
 
   .navContent {
     width: 90%;
@@ -16,10 +18,40 @@
     display: flex;
     align-items: center;
 
-    .navButton {
-      font-size: 1.5rem;
-      &:first-child {
-        margin-left: auto;
+    .navLogo {
+      height: 3rem;
+    }
+
+    .navControls {
+      margin-left: auto;
+      display: flex;
+
+      .navButton {
+        h4 {
+          color: map-get($map: $theme-colors, $key: "accent2");
+          text-align: center;
+          margin: 0;
+        }
+  
+        background-color: rgba(map-get($map: $theme-colors, $key: "primary"), 0.5);
+        height: 2rem;
+        width: 6rem;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 2px;
+        border: 2px solid map-get($map: $theme-colors, $key: "accent2");
+        margin-right: 1rem;
+  
+        &:hover {
+          background-color: rgba(map-get($map: $theme-colors, $key: "primaryAlt"), 0.75);
+        }
+  
+        @media (max-width: 975px) {
+          display: none;
+        }
       }
     }
     

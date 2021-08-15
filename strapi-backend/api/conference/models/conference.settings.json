@@ -1,9 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "conferences",
   "info": {
-    "name": "Home",
-    "description": ""
+    "name": "Conference"
   },
   "options": {
     "increments": true,

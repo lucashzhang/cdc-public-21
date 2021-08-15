@@ -7,12 +7,12 @@ import FAQ from "../../components/FAQ";
 import Directors from "../../components/Directors";
 import Sponsors from "../../components/Sponsors";
 
-function Landing() {
+function Hackathon() {
   const [pageContent, setPageContent] = useState({});
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    const controller = handleEndpoint("home", setPageContent);
+    const controller = handleEndpoint("hackathon", setPageContent);
 
     return () => {
       controller?.abort?.();
@@ -22,12 +22,9 @@ function Landing() {
   return (
     <div className="App-Sections">
       <About content={pageContent["Description"]} />
-      <PageDisplay />
       <FAQ contents={pageContent["FAQ"]} />
-      <Directors />
-      <Sponsors />
     </div>
   );
 }
 
-export default Landing;
+export default Hackathon;

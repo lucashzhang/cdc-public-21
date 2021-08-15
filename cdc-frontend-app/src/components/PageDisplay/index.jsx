@@ -15,11 +15,6 @@ function PageDisplay() {
   return (
     <div className="PageDisplay" id="event">
       <div className="row">
-        <div className="container page-display-grid-container">
-          <GridAnimation>
-            <Collage/>
-          </GridAnimation>
-        </div>
         <div className="page-display-content">
           <header>
             <h1>Our Event</h1>
@@ -38,6 +33,11 @@ function PageDisplay() {
                 )
             )}
           </div>
+        </div>
+        <div className="container page-display-grid-container">
+          <GridAnimation>
+            <Collage/>
+          </GridAnimation>
         </div>
       </div>
     </div>

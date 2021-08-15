@@ -1,9 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "hackathons",
   "info": {
-    "name": "Home",
-    "description": ""
+    "name": "Hackathon"
   },
   "options": {
     "increments": true,

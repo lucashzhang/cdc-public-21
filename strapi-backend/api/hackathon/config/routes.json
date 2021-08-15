@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hackathon",
+      "handler": "hackathon.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/hackathon",
+      "handler": "hackathon.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/hackathon",
+      "handler": "hackathon.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

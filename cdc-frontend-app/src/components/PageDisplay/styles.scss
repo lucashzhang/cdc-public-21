@@ -40,17 +40,13 @@
     max-width: 1000px;
     margin-right: 2rem;
     margin-left: 2rem;
-    transform: rotateY(24deg) rotateX(16deg);
+    transform: rotateY(-24deg) rotateX(16deg);
 
     .page-display-collage {
       background-color: red;
       height: 20px;
       width: 20px;
       margin: 2px;
-    }
-
-    svg {
-      transform: scale(-1, 1);
     }
 
     @media only screen and (max-width: 992px) {
@@ -67,6 +63,7 @@
     display: flex;
     align-items: center;
     transition: 0.3s;
+    border-radius: 2px;
 
     svg {
       margin-left: auto;
