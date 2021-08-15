@@ -27,9 +27,6 @@
     },
     "Name": {
       "type": "string"
-    },
-    "Icon": {
-      "type": "string"
     }
   }
 }
