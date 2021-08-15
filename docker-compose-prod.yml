@@ -8,16 +8,16 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx-production/certs:/etc/nginx/certs
-    acme-companion:
-      image: nginxproxy/acme-companion
-      container_name: nginx-proxy-acme
-      volumes:
-        - /var/run/docker.sock:/tmp/docker.sock:ro
-        - ./nginx-production/certs:/etc/nginx/certs:rw
-        - ./nginx-production/acme:/etc/acme.sh
-        - /var/run/docker.sock:/var/run/docker.sock:ro
-      environment:
-        - DEFAULT_EMAIL=lhzhang@ad.unc.edu
+  acme-companion:
+    image: nginxproxy/acme-companion
+    container_name: nginx-proxy-acme
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./nginx-production/certs:/etc/nginx/certs:rw
+      - ./nginx-production/acme:/etc/acme.sh
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - DEFAULT_EMAIL=lhzhang@ad.unc.edu
   react-app:
     build:
       context: ./cdc-frontend-app
