@@ -26,7 +26,6 @@ function Directors() {
                         return (
                             <div className="directorCard" key={`${name}${position}`}>
                                 <LazyLoad height={300} offset={100} once>
-
                                     <img src={`${handleAPIURL()}${small?.url || url || ""}`} alt="" />
                                     <h3 className="directorName">{name}</h3>
                                     <div className="directorPosition">{position}</div>
