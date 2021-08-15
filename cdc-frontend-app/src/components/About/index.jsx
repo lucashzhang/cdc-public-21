@@ -5,7 +5,6 @@ import Collage from "../Collage";
 import "./styles.scss";
 
 function About({ content }) {
-  console.log(content);
   return content ? (
     <div className="About" id="about">
       <div className="row">
