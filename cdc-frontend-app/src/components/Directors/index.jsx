@@ -14,7 +14,7 @@ function Directors() {
     return directors && directors.length !== 0 && (
         <div className="Directors" id="directors">
             <header>
-                <h1>Directors</h1>
+                <h1>Our Team of Directors</h1>
             </header>
             <div className="container">
                 <WrappedCarousel>

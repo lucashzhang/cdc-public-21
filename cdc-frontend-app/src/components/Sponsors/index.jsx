@@ -13,7 +13,7 @@ function Sponsors() {
     return (
         <div className="Sponsors" id="sponsors">
             <header>
-                <h1>Sponsors</h1>
+                <h1>Our Sponsors</h1>
             </header>
             <div className="row">
                 {sponsors && sponsors.length !== 0 && sponsors?.map(sponsor => {
