@@ -80,6 +80,7 @@ input[type="reset"] {
 .App-Content {
   background-color: rgba(map-get($map: $theme-colors, $key: "primaryAlt"), 0.75);
   padding-bottom: 3rem;
+  width: 100vw;
 }
 
 .App-Sections {

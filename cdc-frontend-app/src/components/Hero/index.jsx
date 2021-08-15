@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from '../../assets/cdcfinal.svg';
+import keyart from '../../assets/cdckeyart3.svg';
+import title from '../../assets/cdctitletext.svg';
 import './styles.scss';
 
 function Hero() {
 
   return (
-    <div className="Landing" id="hero">
-      <header className="Landing-header">
-        <img src={logo} className="Landing-logo" alt="logo" />
-        <p>
-          Hello, Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="Landing-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Hero row" id="hero">
+      <div className="hero-left hero-column">
+        <div className="hero-content">
+          <img className="hero-title" src={title} alt="Carolina Data Challenge" />
+          <div className="hero-link-container">
+            <a className="hero-links" href="#" target="_self">
+              <h4>Coming Soon!</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="hero-right hero-column">
+        <img className="hero-graphic" src={keyart} alt="" />
+      </div>
     </div>
   );
 }
