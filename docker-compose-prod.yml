@@ -16,6 +16,8 @@ services:
         - ./nginx-production/certs:/etc/nginx/certs:rw
         - ./nginx-production/acme:/etc/acme.sh
         - /var/run/docker.sock:/var/run/docker.sock:ro
+      environment:
+        - DEFAULT_EMAIL=lhzhang@ad.unc.edu
   react-app:
     build:
       context: ./cdc-frontend-app
