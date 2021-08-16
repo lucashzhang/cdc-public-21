@@ -28,8 +28,13 @@
         &:last-child {
             background-color: map-get($map: $theme-colors, $key: "accent1");
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             h2 {
                 color: map-get($map: $theme-colors, $key: "primary");
+                margin: 0;
             }
 
             &:hover {
