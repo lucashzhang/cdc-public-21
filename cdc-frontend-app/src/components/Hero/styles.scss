@@ -9,14 +9,14 @@
     width: 45%;
     max-width: 1000px;
 
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 800px) {
       width: 100%;
       height: calc(min(30vh, 90vw));
     }
   }
 
   &.row {
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 800px) {
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
@@ -37,14 +37,14 @@
       flex-direction: column;
       align-items: center;
 
-      @media only screen and (max-width: 992px) {
+      @media only screen and (max-width: 800px) {
         height: calc(min(30vh, 90vw));
       }
 
       .hero-title {
         margin: 2rem 4rem 2rem 2rem;
-        @media only screen and (max-width: 992px) {
-          height: calc(min(30vh, 90vw));
+        @media only screen and (max-width: 800px) {
+          height: calc(min(20vh, 90vw));
           max-width: 90vw;
           margin: 2rem;
         }
@@ -74,12 +74,12 @@
             background-color: map-get($map: $theme-colors, $key: "accent1Alt");
           }
 
-          @media only screen and (max-width: 992px) {
+          @media only screen and (max-width: 800px) {
             width: calc(100vw - 4rem);
           }
         }
 
-        @media only screen and (max-width: 992px) {
+        @media only screen and (max-width: 800px) {
           position: relative;
           margin: 2rem;
         }
@@ -98,7 +98,7 @@
       transform: scale(-1, 1);
       margin: 2rem;
 
-      @media only screen and (max-width: 992px) {
+      @media only screen and (max-width: 800px) {
         height: calc(min(30vh, 90vw));
         max-width: 90vw;
       }
