@@ -1,7 +1,7 @@
 export function handleAPIURL() {
-  return `https://${process.env.NODE_ENV === "development"
-    ? "localhost:1337"
-    : "api.cdcunc.com"
+  return `${process.env.NODE_ENV === "development"
+    ? "http://localhost:1337"
+    : "https://api.cdcunc.com"
     }`;
 }
 
