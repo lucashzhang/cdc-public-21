@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx-proxy:
-    image: jwilder/nginx-proxy
+    image: jwilder/nginx-proxy:alpine
     ports:
       - "80:80"
       - "443:443"
@@ -13,8 +13,8 @@ services:
       context: ./cdc-frontend-app
       dockerfile: Dockerfile.prod
     environment:
-      # - VIRTUAL_HOST=cdcunc.com,www.cdcunc.com
-      - VIRTUAL_HOST=localhost
+      - VIRTUAL_HOST=cdcunc.com,www.cdcunc.com
+      # - VIRTUAL_HOST=localhost
   strapi:
     image: strapi/strapi
     volumes:
