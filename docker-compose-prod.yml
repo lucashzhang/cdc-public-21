@@ -13,8 +13,8 @@ services:
       context: ./cdc-frontend-app
       dockerfile: Dockerfile.prod
     environment:
-      - VIRTUAL_HOST=cdcunc.com,www.cdcunc.com
-      # - VIRTUAL_HOST=localhost
+      # - VIRTUAL_HOST=cdcunc.com,www.cdcunc.com
+      - VIRTUAL_HOST=localhost
   strapi:
     image: strapi/strapi
     volumes:

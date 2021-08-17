@@ -6,7 +6,7 @@ import Landing from "../Landing";
 import Hackathon from "../Hackathon";
 import Conference from "../Conference";
 import Target from "../Target";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
