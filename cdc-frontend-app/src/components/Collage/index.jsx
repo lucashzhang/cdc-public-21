@@ -29,35 +29,35 @@ function Collage() {
     <div className="Collage">
       <CollageItem
         color="accent1"
-        position={{ top: "15%", left: "46%" }}
+        position={{ top: "14%", left: "46%" }}
         size="33%"
       >
         <CalculatorIcon />
       </CollageItem>
       <CollageItem
         color="accent4"
-        position={{ top: "33%", left: "16%" }}
+        position={{ top: "32%", left: "18%" }}
         size="25%"
       >
         <CodeIcon />
       </CollageItem>
       <CollageItem
         color="accent2"
-        position={{ top: "10%", left: "31%" }}
+        position={{ top: "13%", left: "31%" }}
         size="20%"
       >
         <ChartPieIcon />
       </CollageItem>
       <CollageItem
         color="accent3"
-        position={{ top: "55%", left: "36%" }}
+        position={{ top: "49%", left: "36%" }}
         size="22%"
       >
         <BookOpenIcon />
       </CollageItem>
       <CollageItem
         color="secondary"
-        position={{ top: "50%", left: "68%" }}
+        position={{ top: "47%", left: "68%" }}
         size="20%"
       >
         <BeakerIcon />
