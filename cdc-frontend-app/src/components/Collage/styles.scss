@@ -26,5 +26,9 @@
 .Collage {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 64%;
+
+  @media only screen and (max-width: 992px) {
+    height: 100%;
+  }
 }

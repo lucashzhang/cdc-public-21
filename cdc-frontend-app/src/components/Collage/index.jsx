@@ -9,7 +9,7 @@ import {
 import theme from "../../utilities/theme.module.scss";
 import "./styles.scss";
 
-function CollageItem({ children, color, position, size = '20%' }) {
+function CollageItem({ children, color, position, size = "20%" }) {
   return (
     <div className="CollageItem" style={{ ...position, width: size }}>
       <svg
@@ -27,32 +27,40 @@ function CollageItem({ children, color, position, size = '20%' }) {
 function Collage() {
   return (
     <div className="Collage">
-      <CollageItem color="secondary" position={{ top: '50%', left: '30%' }} size="28%">
-        <BeakerIcon />
-      </CollageItem>
       <CollageItem
         color="accent1"
-        position={{ top: '20%', right: '20%' }}
-        size='40%'
+        position={{ top: "15%", left: "46%" }}
+        size="33%"
       >
         <CalculatorIcon />
       </CollageItem>
       <CollageItem
+        color="accent4"
+        position={{ top: "33%", left: "16%" }}
+        size="25%"
+      >
+        <CodeIcon />
+      </CollageItem>
+      <CollageItem
         color="accent2"
-        position={{ bottom: '22%', right: '22%' }}
-        size='22%'
+        position={{ top: "10%", left: "31%" }}
+        size="20%"
       >
         <ChartPieIcon />
       </CollageItem>
-      <CollageItem color="accent3" position={{ bottom: '48%', left: '24%' }} size="22%">
+      <CollageItem
+        color="accent3"
+        position={{ top: "55%", left: "36%" }}
+        size="22%"
+      >
         <BookOpenIcon />
       </CollageItem>
       <CollageItem
-        color="accent4"
-        position={{ bottom: '30%', left: '10%' }}
-        size='25%'
+        color="secondary"
+        position={{ top: "50%", left: "68%" }}
+        size="20%"
       >
-        <CodeIcon />
+        <BeakerIcon />
       </CollageItem>
     </div>
   );
