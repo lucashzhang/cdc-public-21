@@ -29,6 +29,11 @@
     },
     "website": {
       "type": "string"
+    },
+    "tier": {
+      "type": "integer",
+      "max": 4,
+      "min": 1
     }
   }
 }
