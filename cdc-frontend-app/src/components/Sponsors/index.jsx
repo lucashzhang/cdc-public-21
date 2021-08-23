@@ -7,7 +7,7 @@ import "./styles.scss";
 function Sponsors() {
     const [sponsors, setSponsors] = useState([]);
     useEffect(() => {
-        handleEndpoint("sponsors", setSponsors);
+        handleEndpoint("sponsors?_sort=tier:DESC", setSponsors);
     }, []);
 
     return (

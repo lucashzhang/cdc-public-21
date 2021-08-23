@@ -8,7 +8,7 @@ import "./styles.scss";
 function Directors() {
     const [directors, setDirectors] = useState([]);
     useEffect(() => {
-        handleEndpoint("directors", setDirectors);
+        handleEndpoint("directors?_sort=position:ASC", setDirectors);
     }, []);
 
     return directors && directors.length !== 0 && (
