@@ -1,9 +1,8 @@
 {
-  "collectionName": "components_section_link_lists",
+  "collectionName": "components_section_resources",
   "info": {
     "name": "Resources",
-    "icon": "book-open",
-    "description": ""
+    "icon": "book-open"
   },
   "options": {},
   "attributes": {
