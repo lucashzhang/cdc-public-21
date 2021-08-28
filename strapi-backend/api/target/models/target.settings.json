@@ -16,9 +16,8 @@
       "type": "dynamiczone",
       "components": [
         "section.description",
-        "section.schedules",
-        "section.tracks",
-        "section.faq"
+        "section.faq",
+        "section.link-list"
       ]
     },
     "UID": {
