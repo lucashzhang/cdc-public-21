@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { handleEndpoint } from "../../utilities/util";
 
 import About from "../../components/About";
+import Event from "../../components/Event";
 import PageDisplay from "../../components/PageDisplay";
 import FAQ from "../../components/FAQ";
 import Directors from "../../components/Directors";
@@ -11,7 +12,7 @@ function Landing() {
   const [pageContent, setPageContent] = useState({});
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     const controller = handleEndpoint("home", setPageContent);
 
     return () => {
@@ -22,6 +23,7 @@ function Landing() {
   return (
     <div className="App-Sections">
       <About content={pageContent["Description"]} />
+      <Event />
       <PageDisplay />
       <FAQ contents={pageContent["FAQ"]} />
       <Directors />

@@ -12,17 +12,15 @@ function PageDisplay() {
     handleEndpoint("targets", setTargets);
   }, []);
 
-  return (
-    <div className="PageDisplay" id="event">
+  return targets && targets.length > 0 ? (
+    <div className="PageDisplay" id="fields">
       <div className="row">
         <div className="page-display-content">
           <header>
-            <h1>Our Event</h1>
+            <h1>Data Science in Your Field</h1>
           </header>
           <div className="page-display-list container">
-            <ListCard title="Hackathon" to="/hackathon" />
-            <ListCard title="Data Conference" to="/conference" />
-            {targets && targets?.map(
+            {targets?.map(
               (target) =>
                 target["Name"] && (
                   <ListCard
@@ -36,12 +34,12 @@ function PageDisplay() {
         </div>
         <div className="container page-display-grid-container">
           <GridAnimation>
-            <Collage/>
+            <Collage />
           </GridAnimation>
         </div>
       </div>
     </div>
-  );
+  ) : null;
 }
 
 export default PageDisplay;

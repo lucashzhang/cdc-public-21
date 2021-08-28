@@ -3,6 +3,7 @@
 
 .PageDisplay {
   height: 700px;
+  overflow: hidden;
 
   @media only screen and (max-width: 992px) {
     height: auto;
@@ -15,7 +16,7 @@
 
     @media only screen and (max-width: 992px) {
       perspective: none;
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   }
 
@@ -50,7 +51,11 @@
     }
 
     @media only screen and (max-width: 992px) {
-      display: none;
+      transform: rotateY(0deg) rotateX(0deg);
+      margin-right: 1rem;
+      margin-left: 1rem;
+      width: calc(100vw);
+      height: calc(calc(100vw) / 16 * 9);
     }
   }
 
