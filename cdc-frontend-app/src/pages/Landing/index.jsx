@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { handleEndpoint } from "../../utilities/util";
 
+import Hero from "../../components/Hero";
 import About from "../../components/About";
 import Event from "../../components/Event";
 import PageDisplay from "../../components/PageDisplay";
@@ -21,14 +22,19 @@ function Landing() {
   }, []);
 
   return (
-    <div className="App-Sections">
-      <About content={pageContent["Description"]} />
-      <Event />
-      <PageDisplay />
-      <FAQ contents={pageContent["FAQ"]} />
-      <Directors />
-      <Sponsors />
-    </div>
+    <>
+      <Hero />
+      <div className="App-Content">
+        <div className="App-Sections">
+          <About content={pageContent["Description"]} />
+          <Event />
+          <PageDisplay />
+          <FAQ contents={pageContent["FAQ"]} />
+          <Directors />
+          <Sponsors />
+        </div>
+      </div>
+    </>
   );
 }
 

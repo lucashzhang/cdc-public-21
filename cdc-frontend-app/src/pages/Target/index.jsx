@@ -3,7 +3,7 @@ import { handleEndpoint } from "../../utilities/util";
 import { useParams, useHistory } from "react-router-dom";
 import About from "../../components/About";
 import FAQ from "../../components/FAQ";
-import Resources from '../../components/Resources';
+import Resources from "../../components/Resources";
 
 function Target() {
   const [pageContent, setPageContent] = useState({});
@@ -24,7 +24,6 @@ function Target() {
 
   function handleSection(sectionInfo) {
     const { __component, id } = sectionInfo;
-    console.log(__component)
     switch (__component) {
       case "section.description":
         return <About key={`${__component}${id}`} content={sectionInfo} />;
@@ -37,13 +36,13 @@ function Target() {
     }
   }
 
-  return (
-    <div className="App-Sections">
-      {pageContent[0] &&
-        pageContent[0]["Sections"] &&
-        pageContent[0]["Sections"].map((section) => handleSection(section))}
+  return pageContent && pageContent[0] && pageContent[0]["Sections"] ? (
+    <div className="App-Content">
+      <div className="App-Sections">
+        {pageContent[0]["Sections"].map((section) => handleSection(section))}
+      </div>
     </div>
-  );
+  ) : null;
 }
 
 export default Target;

@@ -8,7 +8,6 @@ function Conference() {
   const [pageContent, setPageContent] = useState({});
 
   useEffect(() => {
-    window.scrollTo(0, 0)
     const controller = handleEndpoint("conference", setPageContent);
 
     return () => {
@@ -17,9 +16,11 @@ function Conference() {
   }, []);
 
   return (
-    <div className="App-Sections">
-      <About content={pageContent["Description"]} />
-      <FAQ contents={pageContent["FAQ"]} />
+    <div className="App-Content">
+      <div className="App-Sections">
+        <About content={pageContent["Description"]} />
+        <FAQ contents={pageContent["FAQ"]} />
+      </div>
     </div>
   );
 }

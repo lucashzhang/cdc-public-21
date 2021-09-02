@@ -9,7 +9,7 @@ function Event() {
         <h1>Our Event</h1>
       </header>
       <div className="row">
-        <ListCard title="Hackathon" to="/hackathon" />
+        <ListCard title="Data Challenge" to="/hackathon" />
         <ListCard title="Data Conference" to="/conference" />
       </div>
     </div>
