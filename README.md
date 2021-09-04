@@ -23,25 +23,25 @@ Additional JavaScript libraries used:
 ## Setting up a Development Environment
 Go to the top most directory of the project (the one where the docker-compose.yml file resides) and run the following command:
 ```
-docker compose up -d
+docker-compose up -d
 ```
 To rebuild any images run:
 ```
-docker compose up -d --build
+docker-compose up -d --build
 ```
 To shut it all down run:
 ```
-docker compose down
+docker-compose down
 ```
 
 ## Building the Production Environment
 Go to the top most directory of the project (the one where the docker-compose.yml file resides) and run the following command:
 ```
-docker compose -f docker-compose-prod.yml up -d --build
+docker-compose -f docker-compose-prod.yml up -d --build
 ```
 To shut it all down run:
 ```
-docker compose -f docker-compose-prod.yml down
+docker-compose -f docker-compose-prod.yml down
 ```
 
 If it doesn't work in Digital Ocean (Error 137), try:
