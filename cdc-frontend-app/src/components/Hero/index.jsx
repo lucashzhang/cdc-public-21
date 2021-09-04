@@ -12,7 +12,7 @@ function Hero() {
           <img className="hero-title" src={title} alt="Carolina Data Challenge" />
           <div className="hero-link-container">
             <a className="hero-links" href="https://carolinadatachallenge.typeform.com/to/aLO0h6J8" target="_blank">
-              <h4>Register Today!</h4>
+              <h2>Register Today!</h2>
             </a>
           </div>
         </div>

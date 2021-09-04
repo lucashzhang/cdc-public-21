@@ -65,7 +65,7 @@
           text-align: center;
           transition: background-color 0.3s;
 
-          h4 {
+          h2 {
             margin: 0;
             color: map-get($map: $theme-colors, $key: "primary");
           }
