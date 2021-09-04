@@ -4,7 +4,10 @@ import "./styles.scss";
 
 function Resources({ contents }) {
   return (
-    <div className="Event" id="event">
+    <div className="Resource">
+      <header>
+        <h1>{contents["title"]}</h1>
+      </header>
       <div className="row">
         {contents["resources"].map((resource) => (
           <ListCard title={resource.title ?? ""} to={resource.link ?? "#"} />
