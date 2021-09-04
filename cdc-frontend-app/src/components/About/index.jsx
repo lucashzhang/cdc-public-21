@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import GridAnimation from "../GridAnimation";
-import Collage from "../Collage";
+import Magnify from "../../assets/magnifying3.svg";
 import "./styles.scss";
 
 function About({ content }) {
@@ -20,7 +20,7 @@ function About({ content }) {
                 frameBorder="0"
               ></iframe>
             ) : (
-              <Collage />
+              <img src={Magnify} />
             )}
           </GridAnimation>
         </div>
