@@ -44,7 +44,6 @@ To shut it all down run:
 docker-compose -f docker-compose-prod.yml down
 ```
 
-If it doesn't work in Digital Ocean (Error 137), try:
-```
+#### If it doesn't work in Digital Ocean (Error 137), try:
 https://www.digitalocean.com/community/questions/npm-gets-killed-no-matter-what
-```
+
