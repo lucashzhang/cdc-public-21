@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkIcon } from "@heroicons/react/solid";
+import { ExternalLinkIcon as LinkIcon } from "@heroicons/react/solid";
 import "./styles.scss";
 
 function ListCard({ title, to }) {
