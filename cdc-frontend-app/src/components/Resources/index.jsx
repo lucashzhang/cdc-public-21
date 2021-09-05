@@ -8,7 +8,7 @@ function Resources({ contents }) {
       <header>
         <h1>{contents["title"]}</h1>
       </header>
-      <div className="row">
+      <div className="row container">
         {contents["resources"].map((resource) => (
           <ListCard title={resource.title ?? ""} to={resource.link ?? "#"} />
         ))}

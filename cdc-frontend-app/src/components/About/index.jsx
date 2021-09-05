@@ -8,7 +8,7 @@ function About({ content }) {
   return content ? (
     <div className="About" id="about">
       <div className="row">
-        <div className="container about-video-container">
+        <div className="about-video-container">
           <GridAnimation>
             {content["video"] ? (
               <iframe
