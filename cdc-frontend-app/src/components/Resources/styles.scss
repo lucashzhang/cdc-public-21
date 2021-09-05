@@ -30,6 +30,7 @@
 
     h4 {
       color: map-get($map: $theme-colors, $key: "primary");
+      max-width: calc(100% - 2rem);
     }
 
     &:hover {
