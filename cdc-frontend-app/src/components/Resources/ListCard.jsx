@@ -6,7 +6,7 @@ function ListCard({ title, to }) {
   return (
       <a href={to} className="ListCard" >
         <h4>{title}</h4>
-        {to && <LinkIcon />}
+        {to !== "#" && <LinkIcon />}
       </a>
   );
 }
