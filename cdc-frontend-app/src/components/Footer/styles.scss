@@ -20,10 +20,47 @@
     margin: 3rem;
 
     .button-icon {
-      fill: white;
+      fill: white !important;
       width: 60px;
       height: 60px;
       margin-top: 1rem;
     }
   }
 }
+
+#mail-button {
+  svg {
+    fill: map-get($map: $theme-colors, $key: accent4);
+  }
+
+  &:hover {
+    svg {
+      fill: map-get($map: $theme-colors, $key: accent4Alt);
+    }
+  }
+}
+
+#instagram-button {
+  svg {
+    fill: map-get($map: $theme-colors, $key: secondary);
+  }
+
+  &:hover {
+    svg {
+      fill: map-get($map: $theme-colors, $key: secondaryAlt);
+    }
+  }
+}
+
+#linkedin-button {
+  svg {
+    fill: map-get($map: $theme-colors, $key: accent2);
+  }
+
+  &:hover {
+    svg {
+      fill: map-get($map: $theme-colors, $key: accent2Alt);
+    }
+  }
+}
+

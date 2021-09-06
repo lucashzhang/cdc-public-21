@@ -9,6 +9,7 @@ function Footer() {
       <div className="row">
         <ButtonLink
           className="Footer-links"
+          id="linkedin-button"
           to="https://www.linkedin.com/company/carolinadatachallenge/"
         >
           <svg
@@ -21,7 +22,8 @@ function Footer() {
         </ButtonLink>
         <ButtonLink
           className="Footer-links"
-          to="https://www.facebook.com/events/381296296903322"
+          id="instagram-button"
+          to="https://www.instagram.com/cdc.unc/"
         >
           <svg
             viewBox="0 0 24 24"
@@ -33,7 +35,8 @@ function Footer() {
         </ButtonLink>
         <ButtonLink
           className="Footer-links"
-          to="https://www.instagram.com/cdc.unc/"
+          id="facebook-button"
+          to="https://www.facebook.com/events/381296296903322"
         >
           <svg
             viewBox="0 0 24 24"
@@ -43,7 +46,7 @@ function Footer() {
             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.67 4.533-4.67 1.312 0 2.686.236 2.686.236v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
           </svg>
         </ButtonLink>
-        <ButtonLink className="Footer-links" to="mailto:hello@cdcunc.com">
+        <ButtonLink className="Footer-links" id="mail-button" to="mailto:hello@cdcunc.com">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="button-icon"

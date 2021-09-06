@@ -1,10 +1,11 @@
 import React from "react";
 import "./styles.scss";
 
-function Button({ className, children, onClick }) {
+function Button({ className, children, onClick, id }) {
   return (
     <button
       className={`Button ${className || ""}`}
+      id={id || ""}
       onClick={onClick}
     >
       <svg
@@ -18,10 +19,11 @@ function Button({ className, children, onClick }) {
   );
 }
 
-export function ButtonLink({ className, children, to }) {
+export function ButtonLink({ className, children, to, id }) {
   return (
     <a
       className={`Button ${className || ""}`}
+      id={id || ""}
       href={to}
       target="_blank"
     >
