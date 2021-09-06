@@ -18,7 +18,7 @@
   .Button {
     height: 100px;
     width: 100px;
-    margin: 3rem;
+    margin: 2rem;
 
     .button-icon {
       fill: white !important;
@@ -43,24 +43,24 @@
 
 #instagram-button {
   svg {
-    fill: map-get($map: $theme-colors, $key: secondary);
-  }
-
-  &:hover {
-    svg {
-      fill: map-get($map: $theme-colors, $key: secondaryAlt);
-    }
-  }
-}
-
-#linkedin-button {
-  svg {
     fill: map-get($map: $theme-colors, $key: accent2);
   }
 
   &:hover {
     svg {
       fill: map-get($map: $theme-colors, $key: accent2Alt);
+    }
+  }
+}
+
+#linkedin-button {
+  svg {
+    fill: map-get($map: $theme-colors, $key: secondary);
+  }
+
+  &:hover {
+    svg {
+      fill: map-get($map: $theme-colors, $key: secondaryAlt);
     }
   }
 }
