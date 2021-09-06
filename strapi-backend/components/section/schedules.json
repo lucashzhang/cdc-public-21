@@ -1,14 +1,14 @@
 {
   "collectionName": "components_section_schedules",
   "info": {
-    "name": "Schedules",
+    "name": "Schedule",
     "icon": "calendar-alt",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "schedules": {
-      "collection": "schedule"
+    "events": {
+      "collection": "events"
     }
   }
 }
