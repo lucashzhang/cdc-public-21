@@ -33,7 +33,7 @@ function Sponsors() {
                 <a className="sponsor-card"
                     href="mailto:sponsors@cdcunc.com">
                     <h2>
-                        Interested in Sponsoring our Hackathon?
+                        Interested in Sponsoring our Event?
                     </h2>
                 </a>
             </div >
