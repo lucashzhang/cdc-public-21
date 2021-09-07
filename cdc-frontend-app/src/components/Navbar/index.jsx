@@ -34,7 +34,7 @@ function NavControls() {
         <>
           <Link to="/#" className="navButton" smooth><h4>Home</h4></Link>
           <Link to="#about" className="navButton" smooth><h4>About Us</h4></Link>
-          <Link to="#" className="navButton" smooth><h4>Schedule</h4></Link>
+          <Link to="#schedule" className="navButton" smooth><h4>Schedule</h4></Link>
           <Link to="#faq" className="navButton" smooth><h4>FAQ</h4></Link>
         </>
       )

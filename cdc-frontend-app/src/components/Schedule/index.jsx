@@ -50,7 +50,7 @@ function Schedule({ content }) {
   }, [content]);
 
   return schedules && schedules.length > 0 ? (
-    <div className="Schedule">
+    <div className="Schedule" id="schedule">
       <header>
         <h1>Schedule</h1>
       </header>
