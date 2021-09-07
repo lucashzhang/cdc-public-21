@@ -22,7 +22,7 @@ function ScheduleTable({ events }) {
           <td>{item.event}</td>
           <td>{item.host}</td>
           <td>{item.type}</td>
-          <td>{/^(ftp|http|https):\/\/[^ "]+$/.test(item.location) ? <a href={item.location} target="_blank">{new URL(item.location).host}</a> : item.location}</td>
+          <td>{/^(ftp|http|https):\/\/[^ "]+$/.test(item.location) ? <a href={item.location} target="_blank">{new URL(item.location).hostname}</a> : item.location}</td>
         </tr>
       ))}
     </table>
