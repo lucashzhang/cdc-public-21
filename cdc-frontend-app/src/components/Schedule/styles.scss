@@ -2,8 +2,32 @@
 @use "sass:map";
 
 .Schedule {
-
   .row {
     justify-content: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      width: 20%;
+      padding: 0.5rem;
+    }
+
+    tr {
+      &:nth-child(odd) {
+        background-color: map-get($map: $theme-colors, $key: "primary");
+      }
+
+      &:first-child {
+        background-color: map-get($map: $theme-colors, $key: "accent1");
+        color: map-get($map: $theme-colors, $key: "primary");
+      }
+    }
+
+    td {
+      padding: 0.5rem;
+    }
   }
 }
