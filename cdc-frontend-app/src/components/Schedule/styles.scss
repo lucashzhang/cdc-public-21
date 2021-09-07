@@ -2,17 +2,17 @@
 @use "sass:map";
 
 .Schedule {
-  .row {
-    justify-content: center;
-  }
+  overflow-x: scroll;
 
   table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 
     th {
       width: 20%;
       padding: 0.5rem;
+      overflow-x: hidden;
     }
 
     tr {
@@ -28,6 +28,10 @@
 
     td {
       padding: 0.5rem;
+      overflow-x: hidden;
+      &:last-child {
+        text-overflow: ellipsis;
+      }
     }
   }
 }
