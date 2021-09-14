@@ -43,8 +43,10 @@
     transform: rotateY(24deg) rotateX(16deg);
 
     .about-video {
-      width: 640px;
-      height: 360px;
+      width: calc(36vw);
+      height: calc(calc(36vw) / 16 * 9);
+      max-width: 640px;
+      max-height: 360px;
       background: map-get($map: $theme-colors, $key: "accent1");
     }
 
