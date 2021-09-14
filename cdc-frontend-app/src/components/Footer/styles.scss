@@ -65,3 +65,19 @@
   }
 }
 
+#cads-button {
+  svg {
+    fill: map-get($map: $theme-colors, $key: accent3);
+  }
+
+  &:hover {
+    svg {
+      fill: map-get($map: $theme-colors, $key: accent3Alt);
+    }
+  }
+
+  img {
+    padding-top: 20px;
+  }
+}
+
