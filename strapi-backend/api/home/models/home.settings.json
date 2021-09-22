@@ -21,6 +21,11 @@
       "type": "component",
       "repeatable": false,
       "component": "section.faq"
+    },
+    "Schedule": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.schedules"
     }
   }
 }

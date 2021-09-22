@@ -5,6 +5,7 @@ import Hero from "../../components/Hero";
 import About from "../../components/About";
 import Event from "../../components/Event";
 import PageDisplay from "../../components/PageDisplay";
+import Schedule from "../../components/Schedule";
 import FAQ from "../../components/FAQ";
 import Directors from "../../components/Directors";
 import Sponsors from "../../components/Sponsors";
@@ -29,6 +30,7 @@ function Landing() {
           <About content={pageContent["Description"]} />
           <Event />
           <PageDisplay />
+          <Schedule content={pageContent["Schedule"]} />
           <FAQ contents={pageContent["FAQ"]} />
           <Directors />
           <Sponsors />
