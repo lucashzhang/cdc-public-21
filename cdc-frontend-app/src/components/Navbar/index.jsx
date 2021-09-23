@@ -43,7 +43,7 @@ function NavControls() {
             target="_blank"
             href="https://drive.google.com/file/d/1Ub7HAv_xsuj9xi29whPx6HAa5KojONGB/view"
           >
-            <h4>Logistics</h4>
+            <h4>Logistics Packet</h4>
           </a>
         </>
       );
