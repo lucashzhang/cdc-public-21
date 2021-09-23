@@ -12,11 +12,11 @@ export function handleEndpoint(endpoint, setter) {
   const controller = new AbortController();
   const signal = controller.signal;
 
-  const saved = window.localStorage.getItem(`api.cdcunc.com/${endpoint}`);
+  const saved = window.sessionStorage.getItem(`api.cdcunc.com/${endpoint}`);
   saved && setter(JSON.parse(saved));
 
   fetch(`${handleAPIURL()}/${endpoint}`, { signal }).then(data => data.json()).then(contents => {
-    window.localStorage.setItem(`api.cdcunc.com/${endpoint}`, JSON.stringify(contents))
+    window.sessionStorage.setItem(`api.cdcunc.com/${endpoint}`, JSON.stringify(contents))
     setter(contents);
   }).catch(error => console.error(error));
 
