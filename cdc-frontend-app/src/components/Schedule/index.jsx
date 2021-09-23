@@ -53,6 +53,7 @@ function Schedule({ content }) {
     <div className="Schedule" id="schedule">
       <header>
         <h1>Schedule</h1>
+        <h3>All times in {new Date().toString().match(/\(([A-Za-z\s].*)\)/)[1]}</h3>
       </header>
       <div className="container">
         {schedules.map((schedule) => (

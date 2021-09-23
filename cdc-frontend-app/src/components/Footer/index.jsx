@@ -71,8 +71,8 @@ function Footer() {
       </div>
       <div>
         <ReactMarkdown>
-          Copyright © 2021 [Carolina Analytics and Data
-          Science](https://carolinadata.unc.edu/). All Rights Reserved
+          Copyright © 2021 Carolina Analytics and Data
+          Science. All Rights Reserved
         </ReactMarkdown>
       </div>
     </div>
