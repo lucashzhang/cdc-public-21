@@ -1,18 +1,39 @@
-import React from 'react';
-import keyart from '../../assets/cdckeyart3.svg';
-import title from '../../assets/cdctitletext.svg';
-import './styles.scss';
+import React from "react";
+import keyart from "../../assets/cdckeyart3.svg";
+import title from "../../assets/cdctitletext.svg";
+import "./styles.scss";
 
 function Hero() {
-
   return (
     <div className="Hero row" id="hero">
       <div className="hero-left hero-column">
         <div className="hero-content">
-          <img className="hero-title" src={title} alt="Carolina Data Challenge" />
+          <img
+            className="hero-title"
+            src={title}
+            alt="Carolina Data Challenge"
+          />
           <div className="hero-link-container">
-            <a className="hero-links" href="https://carolinadatachallenge.typeform.com/to/aLO0h6J8" target="_blank">
+            <a
+              className="hero-links"
+              href="https://carolinadatachallenge.typeform.com/to/aLO0h6J8"
+              target="_blank"
+            >
               <h2>Register Today!</h2>
+            </a>
+            <a
+              className="hero-links devpost-link"
+              href="https://cdcunc21.devpost.com/"
+              target="_blank"
+            >
+              <h2>Devpost</h2>
+            </a>
+            <a
+              className="hero-links discord-link"
+              href="https://discord.gg/WCPjtRzY"
+              target="_blank"
+            >
+              <h2>Discord</h2>
             </a>
           </div>
         </div>

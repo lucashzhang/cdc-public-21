@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { HashLink as Link } from "react-router-hash-link";
-import { useLocation } from 'react-router-dom'
-import logo from '../../assets/cdcfinal.svg'
+import { useLocation } from "react-router-dom";
+import logo from "../../assets/cdcfinal.svg";
 import "./styles.scss";
 
 const navVariants = {
   scrolling: {
     boxShadow: "0 2px 6px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.12)",
-    backgroundColor: "rgba(255, 255, 255, 1)"
+    backgroundColor: "rgba(255, 255, 255, 1)",
   },
 };
 
@@ -20,30 +20,59 @@ function NavControls() {
     case "/":
       return (
         <>
-          <Link to="#about" className="navButton" smooth><h4>About Us</h4></Link>
-          <Link to="#event" className="navButton" smooth><h4>Our Event</h4></Link>
-          {/* <Link to="#" className="navButton" smooth><h4>Schedule</h4></Link> */}
-          <Link to="#faq" className="navButton" smooth><h4>FAQ</h4></Link>
-          <Link to="#directors" className="navButton" smooth><h4>Directors</h4></Link>
-          <Link to="#sponsors" className="navButton" smooth><h4>Sponsors</h4></Link>
+          <Link to="#about" className="navButton" smooth>
+            <h4>About Us</h4>
+          </Link>
+          <Link to="#event" className="navButton" smooth>
+            <h4>Our Event</h4>
+          </Link>
+          <Link to="#schedule" className="navButton" smooth>
+            <h4>Schedule</h4>
+          </Link>
+          <Link to="#faq" className="navButton" smooth>
+            <h4>FAQ</h4>
+          </Link>
+          <Link to="#directors" className="navButton" smooth>
+            <h4>Directors</h4>
+          </Link>
+          <Link to="#sponsors" className="navButton" smooth>
+            <h4>Sponsors</h4>
+          </Link>
+          <a
+            className="navButton"
+            target="_blank"
+            href="https://drive.google.com/file/d/1Ub7HAv_xsuj9xi29whPx6HAa5KojONGB/view"
+          >
+            <h4>Logistics</h4>
+          </a>
         </>
-      )
+      );
     case "/hackathon":
     case "/conference":
       return (
         <>
-          <Link to="/#" className="navButton" smooth><h4>Home</h4></Link>
-          <Link to="#about" className="navButton" smooth><h4>About Us</h4></Link>
-          <Link to="#schedule" className="navButton" smooth><h4>Schedule</h4></Link>
-          <Link to="#faq" className="navButton" smooth><h4>FAQ</h4></Link>
+          <Link to="/#" className="navButton" smooth>
+            <h4>Home</h4>
+          </Link>
+          <Link to="#about" className="navButton" smooth>
+            <h4>About Us</h4>
+          </Link>
+          <Link to="#schedule" className="navButton" smooth>
+            <h4>Schedule</h4>
+          </Link>
+          <Link to="#faq" className="navButton" smooth>
+            <h4>FAQ</h4>
+          </Link>
         </>
-      )
+      );
     default:
       return (
         <>
-          <Link to="/#" className="navButton" smooth><h4>Home</h4></Link>
+          <Link to="/#" className="navButton" smooth>
+            <h4>Home</h4>
+          </Link>
         </>
-      )
+      );
   }
 }
 
@@ -59,7 +88,7 @@ function Navbar() {
 
     return function cleanup() {
       window.removeEventListener("scroll", reportScroll);
-    }
+    };
   }, [isScrolling]);
 
   return (
@@ -69,7 +98,9 @@ function Navbar() {
       className="Navbar"
     >
       <div className="navContent" smooth>
-        <Link className="navLogo"  to="/#" smooth><img src={logo} alt=""></img></Link>
+        <Link className="navLogo" to="/#" smooth>
+          <img src={logo} alt=""></img>
+        </Link>
         <div className="navControls">
           <NavControls />
         </div>
