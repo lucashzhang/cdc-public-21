@@ -30,7 +30,7 @@ function Hero() {
             </a>
             <a
               className="hero-links discord-link"
-              href="https://discord.gg/WCPjtRzY"
+              href="https://discord.gg/6uz9GWEGUs"
               target="_blank"
             >
               <h2>Discord</h2>
