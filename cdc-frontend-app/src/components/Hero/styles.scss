@@ -78,14 +78,8 @@
           }
         }
 
-        @media only screen and (min-width: 800px) {
-          .devpost-link {
-            grid-column: 1;
-          }
-
-          .discord-link {
-            grid-column: 2;
-          }
+        .devpost-link {
+          grid-column: 1 / 3;
         }
 
         @media only screen and (max-width: 800px) {

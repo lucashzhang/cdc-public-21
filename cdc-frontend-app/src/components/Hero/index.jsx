@@ -14,26 +14,17 @@ function Hero() {
             alt="Carolina Data Challenge"
           />
           <div className="hero-link-container">
-            <a
+            <div
               className="hero-links"
-              href="https://carolinadatachallenge.typeform.com/to/aLO0h6J8"
-              target="_blank"
             >
-              <h2>Register Today!</h2>
-            </a>
+              <h2>Event Over</h2>
+            </div>
             <a
               className="hero-links devpost-link"
               href="https://cdcunc21.devpost.com/"
               target="_blank"
             >
-              <h2>Devpost</h2>
-            </a>
-            <a
-              className="hero-links discord-link"
-              href="https://discord.gg/6uz9GWEGUs"
-              target="_blank"
-            >
-              <h2>Discord</h2>
+              <h2>2021 Devpost</h2>
             </a>
           </div>
         </div>
