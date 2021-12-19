@@ -14,11 +14,13 @@ function Hero() {
             alt="Carolina Data Challenge"
           />
           <div className="hero-link-container">
-            <div
+            <a
               className="hero-links"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSegq_r_e34oq5_cbCulmjguFVWWTXBrzJIdbGw3m8d8vgEepQ/viewform"
+              target="_blank"
             >
-              <h2>Event Over</h2>
-            </div>
+              <h2>Carolina Data Challenge 2022 Interest Form</h2>
+            </a>
             <a
               className="hero-links devpost-link"
               href="https://cdcunc21.devpost.com/"

@@ -1,10 +1,10 @@
 export function handleAPIURL() {
-  switch (process.env.NODE_ENV) {
-    case "development":
-      return "http://localhost:1337"
-    default:
+  // switch (process.env.NODE_ENV) {
+  //   case "development":
+  //     return "http://localhost:1337"
+  //   default:
       return "https://api.cdcunc.com";
-  }
+  // }
 }
 
 export function handleEndpoint(endpoint, setter) {
