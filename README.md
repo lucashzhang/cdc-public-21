@@ -47,3 +47,20 @@ docker-compose -f docker-compose-prod.yml down
 #### If it doesn't work in Digital Ocean (Error 137), try:
 https://www.digitalocean.com/community/questions/npm-gets-killed-no-matter-what
 
+## Updating the SSL certificates
+1. Shutdown the website
+2. Get the certificates
+```
+certbot certonly
+```
+2. Pick option 1
+3. Add the necessary domains (api.cdcunc.com, www.cdcunc.com, cdcunc.com)
+4. (Optional) Copy the fullchain and privkey into a temporary directory from /etc/letsencrypt/live/cdcunc.com/ (the directory may change, but certbot should tell you where)
+5. Create the following files in /nginx-production/certs
+- api.cdcunc.com.crt (fullchain)
+- www.cdcunc.com.crt (fullchain)
+- cdcunc.com.crt (fullchain)
+- api.cdcunc.com.key (privkey)
+- www.cdcunc.com.key (privkey)
+- cdcunc.com.key (privkey)
+6. Rebuild the website
